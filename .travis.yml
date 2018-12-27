@@ -37,7 +37,7 @@ after_script:
 
 branches:
   only:
-    - master
+    - dev
 env:
  global:
    - GH_REF: github.com/LinXunFeng/linxunfeng.github.io.git
