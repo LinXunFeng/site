@@ -28,7 +28,7 @@ tags:
 
 这里跟之前不一样的地方在于多了图片资源，组件的核心代码放在Classes文件夹中，而图片我们则存放于Assets目录下，如图所示 
 
-![存放位置](/images/2018/04/iOS 组件化开发（三）：加载资源文件/存放位置.png)
+![存放位置](linxunfeng.github.io/images/2018/04/iOS 组件化开发（三）：加载资源文件/存放位置.png)
 
 ### 一、修改Spec
 将关于资源加载的注释去掉
@@ -41,11 +41,11 @@ s.resource_bundles = {
 
 回到LXFMain的模板库，我们进行一次本地的安装和测试(`pod install`)
 
-![](/images/2018/04/iOS 组件化开发（三）：加载资源文件/修改Spec-podInstall.png)
+![](linxunfeng.github.io/images/2018/04/iOS 组件化开发（三）：加载资源文件/修改Spec-podInstall.png)
 
 可以看到，图片资源也安装进来了，但是运行的效果如下图，图片并不能成功加载出来
 
-![没有图标](/images/2018/04/iOS 组件化开发（三）：加载资源文件/没有图标.png)
+![没有图标](linxunfeng.github.io/images/2018/04/iOS 组件化开发（三）：加载资源文件/没有图标.png)
 
 ## 二、修改加载资源代码
 这是当前加载图片的相关代码
@@ -53,21 +53,21 @@ s.resource_bundles = {
 [UIImage imageNamed:@"图片名称"];
 ```
 
-![show in finder](/images/2018/04/iOS 组件化开发（三）：加载资源文件/showInFinder.png)
+![show in finder](linxunfeng.github.io/images/2018/04/iOS 组件化开发（三）：加载资源文件/showInFinder.png)
 
 右击显示包内容
-![LXFMain.framework](/images/2018/04/iOS 组件化开发（三）：加载资源文件/LXFMain.framework.png)
+![LXFMain.framework](linxunfeng.github.io/images/2018/04/iOS 组件化开发（三）：加载资源文件/LXFMain.framework.png)
 
 图片就在这个`LXFMain.bundle`里面(这里就不截图看了)，这里主要是让大家对这个目录结构有个了解
 
 我们对`imageNamed`进行跳转到定义操作
-![imageNamed](/images/2018/04/iOS 组件化开发（三）：加载资源文件/imageNamed.png)
+![imageNamed](linxunfeng.github.io/images/2018/04/iOS 组件化开发（三）：加载资源文件/imageNamed.png)
 
 ```
 // load from main bundle
 ```
 可以看到，官方注释着`imageNamed`加载的是main bundle中的资源,mainBundle的位置如下图
-![mainBundle](/images/2018/04/iOS 组件化开发（三）：加载资源文件/mainBundle.png)
+![mainBundle](linxunfeng.github.io/images/2018/04/iOS 组件化开发（三）：加载资源文件/mainBundle.png)
 
 这样当然就无法加载到图片啦，我们需要让它加载自己当前所在bundle里的图片 ，所以加载图片的代码需要进行修改
 ```objc
@@ -89,7 +89,7 @@ NSString *normalImgPath = [curBundle pathForResource:normalImgName ofType:nil in
 UIImage *normalImage = [UIImage imageWithContentsOfFile:normalImgPath];
 ```
 
-![成功加载](/images/2018/04/iOS 组件化开发（三）：加载资源文件/成功加载.png)
+![成功加载](linxunfeng.github.io/images/2018/04/iOS 组件化开发（三）：加载资源文件/成功加载.png)
 
 ## 三、聊聊xib
 Xib的加载也是如此
@@ -107,13 +107,13 @@ LXFMain.bundle/个人
 这里除了当前xib要加载的图片不属于mainBundle这个原因之外，还有一点就是xib文件与bundle存放位置属于同一级别，故直接使用相对路径的方式，在图片名字前加上bundle名称即可。
 
 
-![同一目录级别](/images/2018/04/iOS 组件化开发（三）：加载资源文件/同一目录级别.png)
+![同一目录级别](linxunfeng.github.io/images/2018/04/iOS 组件化开发（三）：加载资源文件/同一目录级别.png)
 
 
-![xib上的操作](/images/2018/04/iOS 组件化开发（三）：加载资源文件/xib上的操作.png)
+![xib上的操作](linxunfeng.github.io/images/2018/04/iOS 组件化开发（三）：加载资源文件/xib上的操作.png)
 
 虽然无法在xib上直接看到效果，不过确实是有效的
-![xib成功显示图片](/images/2018/04/iOS 组件化开发（三）：加载资源文件/xib成功显示图片.png)
+![xib成功显示图片](linxunfeng.github.io/images/2018/04/iOS 组件化开发（三）：加载资源文件/xib成功显示图片.png)
 
 ## 四、遇到的小问题
 ```

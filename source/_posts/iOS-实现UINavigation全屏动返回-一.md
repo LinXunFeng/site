@@ -22,7 +22,7 @@ interactivePopGestureRecognizer 是UINavigationController自带手势，当我�
 既然自动失效，那我们就告诉它什么时候生效。
 - 在非根控制器下生效(用于滑动返回上一级)
 - 在根控制器下失效(防止根控制器被移除，当然系统不会让我们把它移除，只是会出现bug)
-  ![苹果官方文档说明](/images/2017/09/iOS-实现UINavigation全屏动返回-一/1.png)翻译：第一个被添加的控制器成为永远不会被出栈的根控制器
+  ![苹果官方文档说明](linxunfeng.github.io/images/2017/09/iOS-实现UINavigation全屏动返回-一/1.png)翻译：第一个被添加的控制器成为永远不会被出栈的根控制器
 
 ## 步骤
 自定义一个 UINavigationController ，即继承于 UINavigationController ，名字为 LXFNavigationController ，将代理设为自己，遵守协议 UINavigationControllerDelegate ，实现代理方法 navigationController:didShowViewController:animated:
@@ -63,7 +63,7 @@ LXFNavigationController.m
     }
 }
 ```
-![只有左侧边缘滑动才有效](/images/2017/09/iOS-实现UINavigation全屏动返回-一/2.gif)
+![只有左侧边缘滑动才有效](linxunfeng.github.io/images/2017/09/iOS-实现UINavigation全屏动返回-一/2.gif)
 
 
 

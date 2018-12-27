@@ -29,13 +29,13 @@ tags:
 | AVCaptureVideoPreviewLayer | 展示采集 预览View               |
 
 如图，通过单个 session，也可以管理多个 input 和 output 对象之间的数据流，从而得到视频、静态图像和预览视图
-![多个输入输出设备](/images/2017/10/iOS-视频采集详解/1.png)
+![多个输入输出设备](linxunfeng.github.io/images/2017/10/iOS-视频采集详解/1.png)
 
 如图，input 可以有一个或多个输入端口，output 也可以有一个或多个数据来源（如：一个 [AVCaptureMovieFileOutput](https://developer.apple.com/documentation/avfoundation/avcapturemoviefileoutput) 对象可以接收视频数据和音频数据）
 
 当添加 input 和 output 到 session 中时，session 会自动建立起一个连接(AVCaptureConnection)。我们可以使用这个 connection 来设置从 input 或者 从 output 得到的数据的有效性，也可以用来监控在音频信道中功率的平均值和峰值。
 
-![AVCaptureConnection](/images/2017/10/iOS-视频采集详解/2.png)
+![AVCaptureConnection](linxunfeng.github.io/images/2017/10/iOS-视频采集详解/2.png)
 
 ## 使用 Session 来管理数据流
 创建一个 session 用来管理捕获到的数据，需要先将 inputs 和 outputs 添加到 session 中，当 session 执行 [startRunning] 方法后就会开始将数据流发送至 session，通过执行[stopRunning] 方法来结束数据流的发送。
@@ -56,7 +56,7 @@ if ([captureSession canSetSessionPreset:AVCaptureSessionPreset1280x720]) {
 ```
 附苹果官方文档中可供配置的分辨率列表
 
-![分辨率列表](/images/2017/10/iOS-视频采集详解/3.png)
+![分辨率列表](linxunfeng.github.io/images/2017/10/iOS-视频采集详解/3.png)
 
 其中高分辨率(AVCaptureSessionPresetHigh) 为默认值，会根据当前设备进行自适应，但是这样之后导出来的文件就会很大，一般情况下设置为标清(AVCaptureSessionPreset1280x720) 就可以了
 

@@ -16,12 +16,12 @@ tags:
 
 <The rest of contents | 余下全文>
 
-![ReactiveX](/images/2017/09/iOS - RxSwift 项目实战记录/1.png)
+![ReactiveX](linxunfeng.github.io/images/2017/09/iOS - RxSwift 项目实战记录/1.png)
 
 
 > 最近刚刚把接手的OC项目搞定，经过深思熟虑后，本人决定下个项目起就使用Swift(学了这么久的Swift还没真正用到实际项目里。。。)，而恰巧RxSwift已经出来有一些时间了，语法也基本上稳定，遂只身前来试探试探这RxSwift，接着就做了个小Demo，有兴趣的同学可以瞧一瞧~
 
-![Exhibition](/images/2017/09/iOS - RxSwift 项目实战记录/2.gif)
+![Exhibition](linxunfeng.github.io/images/2017/09/iOS - RxSwift 项目实战记录/2.gif)
 
 
 ## 结构

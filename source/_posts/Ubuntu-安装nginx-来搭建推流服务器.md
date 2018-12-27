@@ -74,7 +74,7 @@ cd nginx-master/
 auto/configure --prefix=/usr/local/nginx --with-pcre=../pcre-8.39 --with-http_ssl_module --with-http_v2_module --with-http_flv_module --with-http_mp4_module --add-module=../nginx-rtmp-module-master/
 ```
 配置好之后会多出一个Makefile文件(一种配置文件，定义了一系列的规则来指定编译操作)与objs文件夹
-![](/images/2017/09/Ubuntu 安装nginx 来搭建推流服务器/1.png)
+![](linxunfeng.github.io/images/2017/09/Ubuntu 安装nginx 来搭建推流服务器/1.png)
 
 ```shell
 // 编译
@@ -84,9 +84,9 @@ sudo make install
 ```
 
 当你make后，看到则代表编译成功
-![make成功](/images/2017/09/Ubuntu 安装nginx 来搭建推流服务器/2.png)
+![make成功](linxunfeng.github.io/images/2017/09/Ubuntu 安装nginx 来搭建推流服务器/2.png)
 再执行【sudo make install】，看到这个则代表安装完成
-![安装完成](/images/2017/09/Ubuntu 安装nginx 来搭建推流服务器/3.png)
+![安装完成](linxunfeng.github.io/images/2017/09/Ubuntu 安装nginx 来搭建推流服务器/3.png)
 
 现在我们去测试一下
 ```shell
@@ -94,14 +94,14 @@ sudo make install
 sudo ./nginx -t
 ```
 看到successful说明配置文件正确！，如果是failed的话看看你是不是没加sudo
-![配置文件正确](/images/2017/09/Ubuntu 安装nginx 来搭建推流服务器/4.png)
+![配置文件正确](linxunfeng.github.io/images/2017/09/Ubuntu 安装nginx 来搭建推流服务器/4.png)
 
 启动nginx服务器
 ```shell
 sudo ./nginx
 ```
 默认端口是80，所以直接到浏览器中直接敲入本地地址 127.0.0.1，显示【Welcome to nginx!】就代表nginx已经成功安装
-![](/images/2017/09/Ubuntu 安装nginx 来搭建推流服务器/5.png)
+![](linxunfeng.github.io/images/2017/09/Ubuntu 安装nginx 来搭建推流服务器/5.png)
 
 ## 配置nginx
 创建推流存放文件夹
@@ -146,9 +146,9 @@ rtmp {
 }
 ```
 
-![hls](/images/2017/09/Ubuntu 安装nginx 来搭建推流服务器/6.png)
+![hls](linxunfeng.github.io/images/2017/09/Ubuntu 安装nginx 来搭建推流服务器/6.png)
 
-![rtmp](/images/2017/09/Ubuntu 安装nginx 来搭建推流服务器/7.png)
+![rtmp](linxunfeng.github.io/images/2017/09/Ubuntu 安装nginx 来搭建推流服务器/7.png)
 
 重启nginx服务器
 ```shell
@@ -190,13 +190,13 @@ brew install ffmpeg
 ```
 
 开始推流，终端上就开始不断的刷新推流信息
-![开始推流](/images/2017/09/Ubuntu 安装nginx 来搭建推流服务器/8.png)
+![开始推流](linxunfeng.github.io/images/2017/09/Ubuntu 安装nginx 来搭建推流服务器/8.png)
 
 
 我们可以用电脑上的VLC这个软件来测试是否推流成功
-![VLC](/images/2017/09/Ubuntu 安装nginx 来搭建推流服务器/9.png)
+![VLC](linxunfeng.github.io/images/2017/09/Ubuntu 安装nginx 来搭建推流服务器/9.png)
 
-![打开流](/images/2017/09/Ubuntu 安装nginx 来搭建推流服务器/10.png)
+![打开流](linxunfeng.github.io/images/2017/09/Ubuntu 安装nginx 来搭建推流服务器/10.png)
 
 OK，rmtp打开正常，hls就不演示了，一样的
-![rmtp打开成功](/images/2017/09/Ubuntu 安装nginx 来搭建推流服务器/11.png)
+![rmtp打开成功](linxunfeng.github.io/images/2017/09/Ubuntu 安装nginx 来搭建推流服务器/11.png)

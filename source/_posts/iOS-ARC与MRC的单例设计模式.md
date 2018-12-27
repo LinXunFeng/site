@@ -24,7 +24,7 @@ tags:
 
 ### 实现
 首先将我们的环境设置为非ARC环境，即MRC，如图
-![MRC环境](/images/2017/09/iOS - ARC与MRC的单例设计模式/1.png)
+![MRC环境](linxunfeng.github.io/images/2017/09/iOS - ARC与MRC的单例设计模式/1.png)
 
 > 在MRC模式下，我们得自己手动释放资源，所以得重写一些与资源创建与释放相关的方法，以保证单例对象的唯一。
 
@@ -192,7 +192,7 @@ SingletonM(FileTool)
 
 ### 指定环境
 顺便提下如何在MRC下指定某个类文件使用的环境为ARC
-![指定环境](/images/2017/09/iOS - ARC与MRC的单例设计模式/2.png)
+![指定环境](linxunfeng.github.io/images/2017/09/iOS - ARC与MRC的单例设计模式/2.png)
 如图，可以在 Build Phases -> Compile Sources 中双击某个需要ARC环境的类文件，然后写上
 
 ```

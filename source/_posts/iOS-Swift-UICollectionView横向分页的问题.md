@@ -18,8 +18,8 @@ tags:
 # UICollectionView横向分页的问题
 ## 情况
 直接看图
-![滚前](/images/2017/09/iOS - Swift UICollectionView横向分页的问题/1.png)
-![滚后](/images/2017/09/iOS - Swift UICollectionView横向分页的问题/2.png)
+![滚前](linxunfeng.github.io/images/2017/09/iOS - Swift UICollectionView横向分页的问题/1.png)
+![滚后](linxunfeng.github.io/images/2017/09/iOS - Swift UICollectionView横向分页的问题/2.png)
 已经设置collectionView的isPagingEnabled为true了，可是出现了这种情况，原因就是collectionView的contentSize不够。
 
 ```
@@ -49,7 +49,7 @@ override var collectionViewContentSize: CGSize {
 ```
 注：ceil函数的作用是求不小于给定实数的最小整数。ceil(2)=ceil(1.2)=cei(1.5)=2.00
 ### 效果
-![](/images/2017/09/iOS - Swift UICollectionView横向分页的问题/3.png)
+![](linxunfeng.github.io/images/2017/09/iOS - Swift UICollectionView横向分页的问题/3.png)
 
 至于如何让item水平布局，请参考[《iOS - Swift UICollectionView横向分页滚动，cell左右排版》](/2017/09/12/[iOS - Swift UICollectionView横向分页滚动，cell左右排版](http://linxunfeng.top/2017/09/12/iOS-Swift-UICollectionView横向分页滚动，cell左右排版/)
 

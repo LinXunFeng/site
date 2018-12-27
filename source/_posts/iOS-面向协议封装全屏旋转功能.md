@@ -87,7 +87,7 @@ func switchFullScreen(
 
 
 
-![lxf_FullScreenable_1](/images/2018/09/iOS 面向协议封装全屏旋转功能/lxf_FullScreenable_1.gif)
+![lxf_FullScreenable_1](linxunfeng.github.io/images/2018/09/iOS 面向协议封装全屏旋转功能/lxf_FullScreenable_1.gif)
 
 
 
@@ -188,7 +188,7 @@ cyanView.lxf.exitFullScreen()
 
 
 
-![lxf_FullScreenable_2](/images/2018/09/iOS 面向协议封装全屏旋转功能/lxf_FullScreenable_2.gif)
+![lxf_FullScreenable_2](linxunfeng.github.io/images/2018/09/iOS 面向协议封装全屏旋转功能/lxf_FullScreenable_2.gif)
 
 
 
@@ -215,7 +215,7 @@ cyanView.lxf.exitFullScreen(config: diyConfig)
 
 
 
-![lxf_FullScreenable_3](/images/2018/09/iOS 面向协议封装全屏旋转功能/lxf_FullScreenable_3.gif)
+![lxf_FullScreenable_3](linxunfeng.github.io/images/2018/09/iOS 面向协议封装全屏旋转功能/lxf_FullScreenable_3.gif)
 
 
 

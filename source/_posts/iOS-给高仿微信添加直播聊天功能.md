@@ -81,49 +81,49 @@ ijkPlayer?.prepareToPlay()
 从B站的gitHub上下载的 [ijkplayer](https://github.com/Bilibili/ijkplayer) 需要手动编译出来，跟着说明走就可以了，这里就不赘述咯，接下来我们将它打包，方便使用
 
 如果你不跟着说明走的话会提示找不到 avformat.h 这个头文件
-![avformat.h](/images/2017/09/iOS - 给高仿微信添加直播聊天功能/1.png)
+![avformat.h](linxunfeng.github.io/images/2017/09/iOS - 给高仿微信添加直播聊天功能/1.png)
 
 这时你需要在终端cd到ijkplayer这个目录，然后执行 init-ios.sh文件，如图
 
-![目录](/images/2017/09/iOS - 给高仿微信添加直播聊天功能/2.png)
+![目录](linxunfeng.github.io/images/2017/09/iOS - 给高仿微信添加直播聊天功能/2.png)
 
-![init-ios.sh](/images/2017/09/iOS - 给高仿微信添加直播聊天功能/3.png)
+![init-ios.sh](linxunfeng.github.io/images/2017/09/iOS - 给高仿微信添加直播聊天功能/3.png)
 
 然后经过一段漫长的时间之后，在ios目录下就多出了这些ffmpeg相关的目录
 
-![ffmpeg相关目录](/images/2017/09/iOS - 给高仿微信添加直播聊天功能/4.png)
+![ffmpeg相关目录](linxunfeng.github.io/images/2017/09/iOS - 给高仿微信添加直播聊天功能/4.png)
 
 这个操作是在下载ffmpeg源码，然缺失的avformat.h就在里面
 
-![avformat.h](/images/2017/09/iOS - 给高仿微信添加直播聊天功能/5.png)
+![avformat.h](linxunfeng.github.io/images/2017/09/iOS - 给高仿微信添加直播聊天功能/5.png)
 
 
 打开项目 IJKMediaPlayer
-![打开项目](/images/2017/09/iOS - 给高仿微信添加直播聊天功能/6.png)
+![打开项目](linxunfeng.github.io/images/2017/09/iOS - 给高仿微信添加直播聊天功能/6.png)
 
 设置为 release，这样打出来的包会小些
-![Edit Scheme](/images/2017/09/iOS - 给高仿微信添加直播聊天功能/7.png)
+![Edit Scheme](linxunfeng.github.io/images/2017/09/iOS - 给高仿微信添加直播聊天功能/7.png)
 
-![release](/images/2017/09/iOS - 给高仿微信添加直播聊天功能/8.png)
+![release](linxunfeng.github.io/images/2017/09/iOS - 给高仿微信添加直播聊天功能/8.png)
 
 选择真机和模拟器，各Command+B编译一次
-![真机](/images/2017/09/iOS - 给高仿微信添加直播聊天功能/9.png)
-![模拟器](/images/2017/09/iOS - 给高仿微信添加直播聊天功能/10.png)
+![真机](linxunfeng.github.io/images/2017/09/iOS - 给高仿微信添加直播聊天功能/9.png)
+![模拟器](linxunfeng.github.io/images/2017/09/iOS - 给高仿微信添加直播聊天功能/10.png)
 
 右击，Show in Finder
-![](/images/2017/09/iOS - 给高仿微信添加直播聊天功能/11.png)
+![](linxunfeng.github.io/images/2017/09/iOS - 给高仿微信添加直播聊天功能/11.png)
 
 如图，就有两个文件夹，里面存放着的就是我们编译出来的库
-![Paste_Image.png](/images/2017/09/iOS - 给高仿微信添加直播聊天功能/12.png)
+![Paste_Image.png](linxunfeng.github.io/images/2017/09/iOS - 给高仿微信添加直播聊天功能/12.png)
 
 可以使用如下命令查看信息
 ```shell 
 lipo -info IJKMediaFramework
 ```
-![查看所支持的处理器](/images/2017/09/iOS - 给高仿微信添加直播聊天功能/13.png)
+![查看所支持的处理器](linxunfeng.github.io/images/2017/09/iOS - 给高仿微信添加直播聊天功能/13.png)
 默认模拟器编译出来的包是不支持i386，如果希望支持的话
 进入项目的 Build Settings，将 Build Active Architecture Only 设置为NO
-![Build Active Architecture Only](/images/2017/09/iOS - 给高仿微信添加直播聊天功能/14.png)
+![Build Active Architecture Only](linxunfeng.github.io/images/2017/09/iOS - 给高仿微信添加直播聊天功能/14.png)
 
 好，现在对编译出来的包进行合并，这样就即支持真机，也支持模拟器
 ```shell
@@ -133,10 +133,10 @@ lipo -info IJKMediaFramework
 lipo -create Release-iphoneos/IJKMediaFramework.framework/IJKMediaFramework Release-iphonesimulator/IJKMediaFramework.framework/IJKMediaFramework -output IJKMediaFramework
 ```
 
-![合并](/images/2017/09/iOS - 给高仿微信添加直播聊天功能/15.png)
+![合并](linxunfeng.github.io/images/2017/09/iOS - 给高仿微信添加直播聊天功能/15.png)
 
 将合并出来的IJKMediaFramework替换 IJKMediaFramework.framework中的IJKMediaFramework，最后将替换好的 IJKMediaFramework.framework 拖入到项目中使用即可。
-![替换](/images/2017/09/iOS - 给高仿微信添加直播聊天功能/16.png)
+![替换](linxunfeng.github.io/images/2017/09/iOS - 给高仿微信添加直播聊天功能/16.png)
 
 最后，附上编译好的IJKMediaFramework
 链接:https://pan.baidu.com/s/1eRYlJ7W 密码:9iaw
