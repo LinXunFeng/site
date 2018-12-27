@@ -36,7 +36,6 @@ carousel:
 
 ## widgets
 widgets:
-  - stick
   - search
   - notification
   - social
