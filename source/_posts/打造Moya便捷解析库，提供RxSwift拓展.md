@@ -185,13 +185,13 @@ MoyaProvider<LXFNetworkTool>(plugins: [MoyaMapperPlugin(NetParameter.self)])
 
 ## 二、MoyaMapper的使用
 
-![MoyaMapper](linxunfeng.github.io/images/2018/05/打造Moya便捷解析库，提供RxSwift拓展/MoyaMapper.png)
+![MoyaMapper](http://linxunfeng.github.io/images/2018/05/打造Moya便捷解析库，提供RxSwift拓展/MoyaMapper.png)
 
 MoyaMapper是基于Moya和SwiftyJSON封装的工具，以Moya的plugin的方式来实现间接解析，支持RxSwift
 
 
 
-![JSON数据对照](linxunfeng.github.io/images/2018/05/打造Moya便捷解析库，提供RxSwift拓展/JSON数据对照.png)
+![JSON数据对照](http://linxunfeng.github.io/images/2018/05/打造Moya便捷解析库，提供RxSwift拓展/JSON数据对照.png)
 
 ### 1、定义并注入自定义键名类
 1. 定义一个遵守ModelableParameterType协议的结构体

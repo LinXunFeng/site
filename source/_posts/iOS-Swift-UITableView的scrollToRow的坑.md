@@ -35,7 +35,7 @@ func scrollToBottom(animated: Bool = false) {
 1.随便输入一条消息，点发送后，在聊天消息列表中并没有滚到最新消息那一行。
 2.退出键盘不做任何操作再打开键盘也是滚到刚才那里(即最新消息的上一条所在位置)
 3.只有在退出键盘后把聊天消息列表的消息向上拉一点距离露出最新消息所在的cell之后，再点击才有用
-![](linxunfeng.github.io/images/2017/09/iOS - Swift UITableView的scrollToRow的"坑"/1.gif)
+![](http://linxunfeng.github.io/images/2017/09/iOS - Swift UITableView的scrollToRow的"坑"/1.gif)
 
 ## 分析
 在无奈之下，经过了一步步的探索，终于发现了问题的所在
@@ -78,4 +78,4 @@ let indexPath = IndexPath(row: dataArr.count - 1, section: 0)
 _ = self.tableView(tableView, cellForRowAt: indexPath)
 ```
 在插入最新消息后，调用tableView的数据源方法来让它先对cell进行布局，这样就获取到了cell的高度，然后再执行 scrollToRow 就好了。
-![完美](linxunfeng.github.io/images/2017/09/iOS - Swift UITableView的scrollToRow的"坑"/2.gif)
+![完美](http://linxunfeng.github.io/images/2017/09/iOS - Swift UITableView的scrollToRow的"坑"/2.gif)

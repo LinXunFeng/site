@@ -17,7 +17,7 @@ tags:
 <The rest of contents | 余下全文>
 
 ## 情况
-![变暗](linxunfeng.github.io/images/2017/09/iOS - Swift UIButton中ImageView的animationImages动画执行完毕后，图标变暗/1.gif)
+![变暗](http://linxunfeng.github.io/images/2017/09/iOS - Swift UIButton中ImageView的animationImages动画执行完毕后，图标变暗/1.gif)
 贴出重要代码
 
 ```swift
@@ -42,7 +42,7 @@ voiceButton.imageView?.stopAnimating()
 // 设置语音按钮的高亮图片
 voiceButton.setImage(#imageLiteral(resourceName: "message_voice_sender_normal"), for: .highlighted)
 ```
-![](linxunfeng.github.io/images/2017/09/iOS - Swift UIButton中ImageView的animationImages动画执行完毕后，图标变暗/2.gif)
+![](http://linxunfeng.github.io/images/2017/09/iOS - Swift UIButton中ImageView的animationImages动画执行完毕后，图标变暗/2.gif)
 
 那知道原因之后就很好解决了
 ## 解决方案
@@ -54,12 +54,12 @@ voiceButton.setImage(#imageLiteral(resourceName: "message_voice_sender_normal"),
 adjustsImageWhenHighlighted
 ```
 查看官方文档的说明
-![](linxunfeng.github.io/images/2017/09/iOS - Swift UIButton中ImageView的animationImages动画执行完毕后，图标变暗/3.png)
+![](http://linxunfeng.github.io/images/2017/09/iOS - Swift UIButton中ImageView的animationImages动画执行完毕后，图标变暗/3.png)
 当该属性设置为true时，按钮在高亮状态下，图片会绘制成高亮（前提是没有手动设置高亮图片）。并且该值的默认值为true
 所以我们也可以将属性adjustsImageWhenHighlighted设置为false，不让系统自动帮我们设置高亮状态下显示的图片即可。
 
 ## 效果
-![完美](linxunfeng.github.io/images/2017/09/iOS - Swift UIButton中ImageView的animationImages动画执行完毕后，图标变暗/4.gif)
+![完美](http://linxunfeng.github.io/images/2017/09/iOS - Swift UIButton中ImageView的animationImages动画执行完毕后，图标变暗/4.gif)
 
 附上相关项目：[Swift 3.0 高仿微信](https://github.com/LinXunFeng/LXFWeChat)
 

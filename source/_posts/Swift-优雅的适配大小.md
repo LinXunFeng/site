@@ -23,7 +23,7 @@ GitHub: [SwiftyFitsize](https://github.com/LinXunFeng/SwiftyFitsize)
 
 最终的效果如下图所示
 
-![效果图](linxunfeng.github.io/images/2018/10/Swift-优雅的适配大小/exhibition.png)
+![效果图](http://linxunfeng.github.io/images/2018/10/Swift-优雅的适配大小/exhibition.png)
 
 ## 安装 
 使用Cocoapods安装，或手动拖入项目

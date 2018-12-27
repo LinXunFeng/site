@@ -74,7 +74,7 @@ class Dog: NSObject, Eatable {
 }
 ```
 这样我们就可以在其它地方轻松调用dog的eat方法，Person类与Robot类也是如法炮制
-![](linxunfeng.github.io/images/2017/09/iOS-Swift-面向协议编程（一）/1.png)
+![](http://linxunfeng.github.io/images/2017/09/iOS-Swift-面向协议编程（一）/1.png)
 
 至此，我们就可以通过面向协议的方式给类定制不同的功能，也就是模块化。可以发现Swift的面向协议编程跟c++的多继承很相似
 

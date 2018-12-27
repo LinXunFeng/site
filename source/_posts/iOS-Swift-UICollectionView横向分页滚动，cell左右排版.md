@@ -17,13 +17,13 @@ tags:
 
 ## 情况
 最近在做表情键盘时遇到一个问题，我用UICollectionView来布局表情，使用横向分页滚动，但在最后一页出现了如图所示的情况
-![只显示一半](linxunfeng.github.io/images/2017/09/iOS-Swift-UICollectionView横向分页滚动，cell左右排版/1.png)
+![只显示一半](http://linxunfeng.github.io/images/2017/09/iOS-Swift-UICollectionView横向分页滚动，cell左右排版/1.png)
 
 ### 情况分析图
 是的，现在的item分布就是这个鬼样子
-![从上到下，从左到右](linxunfeng.github.io/images/2017/09/iOS-Swift-UICollectionView横向分页滚动，cell左右排版/2.jpeg)
+![从上到下，从左到右](http://linxunfeng.github.io/images/2017/09/iOS-Swift-UICollectionView横向分页滚动，cell左右排版/2.jpeg)
 现在想要做的，就是将现在这个鬼样子变成另外一种样子，如图
-![从左到右，从上到下](linxunfeng.github.io/images/2017/09/iOS-Swift-UICollectionView横向分页滚动，cell左右排版/3.jpeg)
+![从左到右，从上到下](http://linxunfeng.github.io/images/2017/09/iOS-Swift-UICollectionView横向分页滚动，cell左右排版/3.jpeg)
 那怎么办？只好重新布局item了
 
 ## 解决方案
@@ -88,7 +88,7 @@ override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewL
 }
 ```
 ## 大功告成
-![](linxunfeng.github.io/images/2017/09/iOS-Swift-UICollectionView横向分页滚动，cell左右排版/4.gif)
+![](http://linxunfeng.github.io/images/2017/09/iOS-Swift-UICollectionView横向分页滚动，cell左右排版/4.gif)
 
 ## 完整代码
 ```swift
