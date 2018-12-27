@@ -1,5 +1,5 @@
 ---
-title: iOS - Swift 面向协议编程（二）
+title: iOS-Swift面向协议编程（二）
 date: 2017-09-12 09:32:49
 categories: "iOS"
 tags:
@@ -21,15 +21,16 @@ tags:
 
 在实际开发中，自定义View基本上是必须的，相信这对我们来说都是比较简单，不过我们还是来回顾一下下~
 
-# 面向对象开发
+## 面向对象开发
+
 1 新建一个UIView的FirstTypeView
-![FirstTypeView](http://linxunfeng.github.io/images/2017/09/iOS - Swift 面向协议编程（二）/1.png)
+![FirstTypeView](http://linxunfeng.github.io/images/2017/09/iOS-Swift面向协议编程（二）/1.png)
 
 2 创建一个View的xib文件
-![xib](http://linxunfeng.github.io/images/2017/09/iOS - Swift 面向协议编程（二）/2.png)
+![xib](http://linxunfeng.github.io/images/2017/09/iOS-Swift面向协议编程（二）/2.png)
 3 设置xib对应的class进行绑定
 
-![xib class](http://linxunfeng.github.io/images/2017/09/iOS - Swift 面向协议编程（二）/3.png)
+![xib class](http://linxunfeng.github.io/images/2017/09/iOS-Swift面向协议编程（二）/3.png)
 
 4 在FirstTypeView.swift 中实现一个类方法，方便我们外部用xib来初始化FirstTypeView
 ```swift
@@ -87,7 +88,7 @@ extension BaseView {
 > 将BaseView删除，FirstTypeView和SecondTypeView改回继承于UIView
 
 1 新建一个Swift文件 Nibloadable.swift
-![Nibloadable](http://linxunfeng.github.io/images/2017/09/iOS - Swift 面向协议编程（二）/4.png)
+![Nibloadable](http://linxunfeng.github.io/images/2017/09/iOS-Swift面向协议编程（二）/4.png)
 
 2 实现协议方法
 
@@ -115,7 +116,7 @@ class SecondTypeView: UIView, Nibloadable {
 
 这样就可以了，而且你在调用loadFromNib方法时可以发现，类型是对应上的
 
-![loadFromNib协议方法](http://linxunfeng.github.io/images/2017/09/iOS - Swift 面向协议编程（二）/5.png)
+![loadFromNib协议方法](http://linxunfeng.github.io/images/2017/09/iOS-Swift面向协议编程（二）/5.png)
 
 好了，面向协议开发的应用就记录到这里，希望能帮助到大家！
 
