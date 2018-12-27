@@ -164,8 +164,8 @@ declaration:
 
 ## 文章打赏
 reward:
-  alipay: 'linxunfeng.top/img/pay/alipay.png'
-  wepay: 'linxunfeng.top/img/pay/wechat.png'
+  alipay: 'http://linxunfeng.github.io/img/pay/alipay.png'
+  wepay: 'http://linxunfeng.github.io/img/pay/wechat.png'
   tip: 赞赏是不耍流氓的鼓励
 
 ## 主题评论
