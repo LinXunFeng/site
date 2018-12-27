@@ -43,14 +43,12 @@ EOF
   git add .
   git commit -m "Update Blog By TravisCI With Build $TRAVIS_BUILD_NUMBER"
   # Github Pages
-  # git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
-  git push --force --quiet "https://${GH_REF}" master:master
+  git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
 
   # Create Tag
   git tag v1.2.$TRAVIS_BUILD_NUMBER -a -m "Auto Taged By TravisCI With Build $TRAVIS_BUILD_NUMBER"
   # Github Pages
-  # git push --quiet "https://${GH_TOKEN}@${GH_REF}" master:master --tags
-  git push --quiet "https://${GH_REF}" master:master --tags
+  git push --quiet "https://${GH_TOKEN}@${GH_REF}" master:master --tags
 }
 
 case $1 in
