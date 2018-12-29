@@ -61,14 +61,14 @@ navigationBar.insertSubview(blurBackView, at: 0)
 
 [《iOS - Swift UICollectionView横向分页滚动，cell左右排版》](http://www.jianshu.com/p/18d7d0f5e3e2)
 
-[《iOS - Swift UICollectionView横向分页的问题》](http://www.jianshu.com/p/60da3b52d64c)
+[《iOS-Swift-UICollectionView横向分页的问题》](http://www.jianshu.com/p/60da3b52d64c)
 
 ## 聊天界面
-[《iOS - Swift 仿微信聊天图片显示》](http://www.jianshu.com/p/4c570cd79bd3)
+[《iOS-Swift 仿微信聊天图片显示》](http://www.jianshu.com/p/4c570cd79bd3)
 
-[《iOS - Swift UITableView的scrollToRow的"坑"》](http://www.jianshu.com/p/aa139463eb4b)
+[《iOS-Swift-UITableView的scrollToRow的"坑"》](http://www.jianshu.com/p/aa139463eb4b)
 
-[《iOS - Swift UIButton中ImageView的animationImages动画执行完毕后，图标变暗》](http://www.jianshu.com/p/412a2e23b5b6)
+[《iOS-Swift-UIButton中ImageView的animationImages动画执行完毕后，图标变暗》](http://www.jianshu.com/p/412a2e23b5b6)
 
 
 ## 首页
@@ -108,7 +108,7 @@ navigationBar.insertSubview(blurBackView, at: 0)
 
 ## 2017-07-24 更新
 抽空出来添加了一个简单的直播功能（对方需要先进入到对应的聊天界面）
-相关博文：[iOS - 给高仿微信添加直播聊天功能](http://www.jianshu.com/p/022b9044decc)
+相关博文：[iOS-给高仿微信添加直播聊天功能](http://www.jianshu.com/p/022b9044decc)
 需要用到[编译好的B站开源库ijkplayer](https://github.com/LinXunFeng/IJKFramework) ，由于打包好的文件太大，传不上来，所以需要各位去自己编译集成进去。
 
 

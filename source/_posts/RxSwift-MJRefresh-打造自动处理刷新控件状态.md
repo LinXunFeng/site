@@ -19,7 +19,7 @@ MVVM的模式中，多出了ViewModel这个角色，将逻辑处理、网络请�
 
 <The rest of contents | 余下全文>
 
-> 本文是基于 [iOS - RxSwift 项目实战记录](http://linxunfeng.top/2017/09/12/iOS-RxSwift-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98%E8%AE%B0%E5%BD%95/) 所述，如果你还未阅读过，建议你最好还先阅读一遍，并下载Demo熟悉一下 : )
+> 本文是基于 [iOS-RxSwift项目实战记录](http://linxunfeng.top/2017/09/12/iOS-RxSwift-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98%E8%AE%B0%E5%BD%95/) 所述，如果你还未阅读过，建议你最好还先阅读一遍，并下载Demo熟悉一下 : )
 
 ## 前言
 
@@ -27,7 +27,7 @@ MVVM的模式中，多出了ViewModel这个角色，将逻辑处理、网络请�
 结合RxSwift架构，我们一般就会在ViewModel中定义一个input收集繁杂操作所需的信息，通过一个transform方法将input作为参数传入，进而得到一个output供controller使用。
 
 在使用RxSwift开发时会大量的使用到这种形式，其中就包括我们的网络请求。
-结合 [iOS - RxSwift 项目实战记录](http://linxunfeng.top/2017/09/12/iOS-RxSwift-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98%E8%AE%B0%E5%BD%95/) 中所述的“MJRefresh在RxSwift中的使用”，在output中定义了一个变量
+结合 [iOS-RxSwift项目实战记录](http://linxunfeng.top/2017/09/12/iOS-RxSwift-%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98%E8%AE%B0%E5%BD%95/) 中所述的“MJRefresh在RxSwift中的使用”，在output中定义了一个变量
 ```swift
 let refreshStatus = Variable<LXFRefreshStatus>(.none)
 ```

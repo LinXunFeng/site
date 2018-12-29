@@ -1,5 +1,5 @@
 ---
-title: iOS 面向协议封装全屏旋转功能
+title: iOS-面向协议封装全屏旋转功能
 date: 2018-09-15 18:05:45
 categories: "iOS"
 tags:
@@ -9,7 +9,7 @@ tags:
 
 <Excerpt in index | 首页摘要> 
 
-> 关于使用面向协议来封装功能的实战可以参考我上篇文章 [【iOS 面向协议方式封装空白页功能】](/2018/04/07/iOS-面向协议方式封装空白页功能/)，这里就不再赘述，我们直接进入使用阶段吧。
+> 关于使用面向协议来封装功能的实战可以参考我上篇文章 [【iOS-面向协议方式封装空白页功能】](/2018/04/07/iOS-面向协议方式封装空白页功能/)，这里就不再赘述，我们直接进入使用阶段吧。
 > 本篇文章只有一个目的，那就是只要遵守协议，一行代码随意切换全屏～
 
 如果对面向协议有疑问的同学可以看下我之前的两篇文章
@@ -22,7 +22,7 @@ tags:
 
 <The rest of contents | 余下全文>
 
-> 关于使用面向协议来封装功能的实战可以参考我上篇文章 [【iOS 面向协议方式封装空白页功能】](/2018/04/07/iOS-面向协议方式封装空白页功能/)，这里就不再赘述，我们直接进入使用阶段吧。
+> 关于使用面向协议来封装功能的实战可以参考我上篇文章 [【iOS-面向协议方式封装空白页功能】](/2018/04/07/iOS-面向协议方式封装空白页功能/)，这里就不再赘述，我们直接进入使用阶段吧。
 > 本篇文章只有一个目的，那就是只要遵守协议，一行代码随意切换全屏～
 
 如果对面向协议有疑问的同学可以看下我之前的两篇文章
@@ -87,7 +87,7 @@ func switchFullScreen(
 
 
 
-![lxf_FullScreenable_1](http://linxunfeng.github.io/images/2018/09/iOS 面向协议封装全屏旋转功能/lxf_FullScreenable_1.gif)
+![lxf_FullScreenable_1](http://linxunfeng.github.io/images/2018/09/iOS-面向协议封装全屏旋转功能/lxf_FullScreenable_1.gif)
 
 
 
@@ -188,7 +188,7 @@ cyanView.lxf.exitFullScreen()
 
 
 
-![lxf_FullScreenable_2](http://linxunfeng.github.io/images/2018/09/iOS 面向协议封装全屏旋转功能/lxf_FullScreenable_2.gif)
+![lxf_FullScreenable_2](http://linxunfeng.github.io/images/2018/09/iOS-面向协议封装全屏旋转功能/lxf_FullScreenable_2.gif)
 
 
 
@@ -215,7 +215,7 @@ cyanView.lxf.exitFullScreen(config: diyConfig)
 
 
 
-![lxf_FullScreenable_3](http://linxunfeng.github.io/images/2018/09/iOS 面向协议封装全屏旋转功能/lxf_FullScreenable_3.gif)
+![lxf_FullScreenable_3](http://linxunfeng.github.io/images/2018/09/iOS-面向协议封装全屏旋转功能/lxf_FullScreenable_3.gif)
 
 
 

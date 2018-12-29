@@ -1,5 +1,5 @@
 ---
-title: Cocoapods 创建第三方框架
+title: Cocoapods-创建第三方框架
 date: 2018-04-06 19:10:01
 categories: "iOS"
 tags:
@@ -16,7 +16,7 @@ tags:
 
 ##  一、上传项目到github
 将框架中的主要文件放入到一个指定文件夹中，比如叫Classes或者Lib都可以
-![目录结构](http://linxunfeng.github.io/images/2018/04/Cocoapods 创建第三方框架/目录结构.png)
+![目录结构](http://linxunfeng.github.io/images/2018/04/Cocoapods-创建第三方框架/目录结构.png)
 
 - 打开终端，cd到框架目录 
 
@@ -93,7 +93,7 @@ git push --tags
 pod spec create 框架名称
 ```
 
-![podspec文件](http://linxunfeng.github.io/images/2018/04/Cocoapods 创建第三方框架/podspec文件.png)
+![podspec文件](http://linxunfeng.github.io/images/2018/04/Cocoapods-创建第三方框架/podspec文件.png)
 
 - 修改Spec文件
 ```
@@ -125,7 +125,7 @@ pod spec create 框架名称
 pod trunk register 598600855@qq.com 'LinXunFeng' --verbose
 ```
 然后去验证邮箱
-![验证成功](http://linxunfeng.github.io/images/2018/04/Cocoapods 创建第三方框架/验证成功.png)
+![验证成功](http://linxunfeng.github.io/images/2018/04/Cocoapods-创建第三方框架/验证成功.png)
 验证成功后会提示我们回到终端，并敲入`pod trunk push 名称.podspec`
 
 ## 四、上传Spec

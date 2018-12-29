@@ -1,5 +1,5 @@
 ---
-title: iOS 组件化开发（一）：远程私有库的基本使用
+title: iOS-组件化开发（一）：远程私有库的基本使用
 date: 2018-04-06 19:23:15
 categories: "iOS"
 tags:
@@ -76,9 +76,9 @@ tags:
 ## 一、创建私有索引库
 这里以码云为例，创建一个LXFSpecs的私有索引库，这玩意的作用如其名，就是用来索引的
 
-![私有索引库](http://linxunfeng.github.io/images/2018/04/iOS 组件化开发（一）：远程私有库的基本使用/私有索引库.png)
+![私有索引库](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（一）：远程私有库的基本使用/私有索引库.png)
 
-![LXFSpecs](http://linxunfeng.github.io/images/2018/04/iOS 组件化开发（一）：远程私有库的基本使用/LXFSpecs.png)
+![LXFSpecs](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（一）：远程私有库的基本使用/LXFSpecs.png)
 
 
 ## 二、本地添加私有索引库
@@ -87,7 +87,7 @@ tags:
 ```
 pod repo
 ```
-![查看本地索引库](http://linxunfeng.github.io/images/2018/04/iOS 组件化开发（一）：远程私有库的基本使用/查看本地索引库.png)
+![查看本地索引库](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（一）：远程私有库的基本使用/查看本地索引库.png)
 
 如图，目前本地仅有github上的那个公有索引库
 
@@ -98,13 +98,13 @@ pod repo
 // pod repo add 索引库名称 索引库地址
 pod repo add LXFSpecs https://gitee.com/LinXunFeng/LXFSpecs.git
 ```
-![](http://linxunfeng.github.io/images/2018/04/iOS 组件化开发（一）：远程私有库的基本使用/添加私有索引库.png)
+![](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（一）：远程私有库的基本使用/添加私有索引库.png)
 
 现在本地就有两个索引库，好，索引库的事情就先放一边去了～
 
 ## 三、创建组件库
 码云上的创建操作同上，这里以LXFBase为例，创建基础组件库
-![LXFBase](http://linxunfeng.github.io/images/2018/04/iOS 组件化开发（一）：远程私有库的基本使用/LXFBase.png)
+![LXFBase](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（一）：远程私有库的基本使用/LXFBase.png)
 
 ### 1、快速创建模版库
 
@@ -113,17 +113,17 @@ pod repo add LXFSpecs https://gitee.com/LinXunFeng/LXFSpecs.git
 // pod lib create 组件名
 pod lib create LXFBase
 ```
-![](http://linxunfeng.github.io/images/2018/04/iOS 组件化开发（一）：远程私有库的基本使用/快速创建模版库.png)
+![](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（一）：远程私有库的基本使用/快速创建模版库.png)
 
 这里会让你配置一些信息，根据自己的情况自行配置即可。
 
-![配置](http://linxunfeng.github.io/images/2018/04/iOS 组件化开发（一）：远程私有库的基本使用/快速创建模版库-配置.png)
+![配置](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（一）：远程私有库的基本使用/快速创建模版库-配置.png)
 
 ### 2、添加组件内容
 
 创建完成后会自动帮我们打开相应的Example项目，LXFBase目录中会出现如图这些文件，我们把基础组件相关的东西丢到Classes文件夹中，并且把`ReplaceMe.m`文件删除
 
-![目录结构](http://linxunfeng.github.io/images/2018/04/iOS 组件化开发（一）：远程私有库的基本使用/目录结构.png)
+![目录结构](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（一）：远程私有库的基本使用/目录结构.png)
 
 默认Classes文件夹中存放的文件就是pod install时要下载下来的文件，当然可以通过修改spec文件的配置来更改位置
 
@@ -137,18 +137,18 @@ pod 'LXFBase', :path => '../'
 ```
 pod install
 ```
-![pod install](http://linxunfeng.github.io/images/2018/04/iOS 组件化开发（一）：远程私有库的基本使用/安装与测试本地库-podinstall.png)
+![pod install](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（一）：远程私有库的基本使用/安装与测试本地库-podinstall.png)
 
-![pod](http://linxunfeng.github.io/images/2018/04/iOS 组件化开发（一）：远程私有库的基本使用/安装与测试本地库-pod.png)
+![pod](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（一）：远程私有库的基本使用/安装与测试本地库-pod.png)
 
 可以看到我们已经将本地的组件添加进Example中了，现在可以尽情地做你想做的测试，确保组件的可用。
 
 测试组件没有问题后，我们接下来就要将podspec文件上传至私有索引库，不过在此之前，需要对spec进行修改。
 
 ### 4、 修改Spec
-具体的配置说明可以参考[Cocoapods 创建第三方框架](https://juejin.im/post/5ac446b8f265da238d50ecfa)
+具体的配置说明可以参考[Cocoapods-创建第三方框架](https://juejin.im/post/5ac446b8f265da238d50ecfa)
 
-![podspec](http://linxunfeng.github.io/images/2018/04/iOS 组件化开发（一）：远程私有库的基本使用/修改Spec-podspec.png)
+![podspec](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（一）：远程私有库的基本使用/修改Spec-podspec.png)
 
 主要的修改内容
 
@@ -186,9 +186,9 @@ git tag '0.1.0'
 git push --tags
 ```
 
-![tag](http://linxunfeng.github.io/images/2018/04/iOS 组件化开发（一）：远程私有库的基本使用/上传组件代码-tag.png)
+![tag](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（一）：远程私有库的基本使用/上传组件代码-tag.png)
 
-![标签上传成功](http://linxunfeng.github.io/images/2018/04/iOS 组件化开发（一）：远程私有库的基本使用/上传组件代码-标签上传成功.png)
+![标签上传成功](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（一）：远程私有库的基本使用/上传组件代码-标签上传成功.png)
 
 
 
@@ -202,7 +202,7 @@ git push --tags
 pod lib lint
 ```
 
-![pod lib lint](http://linxunfeng.github.io/images/2018/04/iOS 组件化开发（一）：远程私有库的基本使用/提交podspec到私有索引库-podLibLint.png)
+![pod lib lint](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（一）：远程私有库的基本使用/提交podspec到私有索引库-podLibLint.png)
 
 ### 2、远程验证
 ```
@@ -212,11 +212,11 @@ pod spec lint
 
 如果你刚才没有打标签并上传至远程私有库就来进行远程验证，肯定是会报错的
 
-![tag Error](http://linxunfeng.github.io/images/2018/04/iOS 组件化开发（一）：远程私有库的基本使用/提交podspec到私有索引库-tagError.png)
+![tag Error](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（一）：远程私有库的基本使用/提交podspec到私有索引库-tagError.png)
 
 在打完并上传tag后再进行远程验证，就会验证成功了，验证成功后我们就可以进行下一步操作：提交podspec文件到索引库
 
-![pod spec lint](http://linxunfeng.github.io/images/2018/04/iOS 组件化开发（一）：远程私有库的基本使用/提交podspec到私有索引库-podSpecLint.png)
+![pod spec lint](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（一）：远程私有库的基本使用/提交podspec到私有索引库-podSpecLint.png)
 
 
 - 验证私有库提示
@@ -234,18 +234,18 @@ pod repo push LXFSpecs LXFBase.podspec
 ```
 这里的操作过程：先将我们的代码直接push到本地索引库LXFSpecs，推送后会自动帮我们同步到远程索引库
 
-![提交成功](http://linxunfeng.github.io/images/2018/04/iOS 组件化开发（一）：远程私有库的基本使用/提交podspec到私有索引库-提交成功.png)
+![提交成功](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（一）：远程私有库的基本使用/提交podspec到私有索引库-提交成功.png)
 
 再来看看码云上的私有索引库LXFSpecs
 
-![LXFBase.podspec](http://linxunfeng.github.io/images/2018/04/iOS 组件化开发（一）：远程私有库的基本使用/提交podspec到私有索引库-LXFBase.podspec.png)
+![LXFBase.podspec](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（一）：远程私有库的基本使用/提交podspec到私有索引库-LXFBase.podspec.png)
 
 
 来测试下搜索我们的组件
 ```
 pod search 'LXFBase'
 ```
-![搜索成功](http://linxunfeng.github.io/images/2018/04/iOS 组件化开发（一）：远程私有库的基本使用/提交podspec到私有索引库-搜索成功.png)
+![搜索成功](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（一）：远程私有库的基本使用/提交podspec到私有索引库-搜索成功.png)
 
 
 ## 六、使用私有库
@@ -267,13 +267,13 @@ source 'https://github.com/CocoaPods/Specs.git'
 pod 'LXFBase'
 ```
 
-![](http://linxunfeng.github.io/images/2018/04/iOS 组件化开发（一）：远程私有库的基本使用/使用私有库-LXFBase.png)
+![](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（一）：远程私有库的基本使用/使用私有库-LXFBase.png)
 
 
 ### 4、安装组件
 ```
 pod install
 ```
-![安装成功](http://linxunfeng.github.io/images/2018/04/iOS 组件化开发（一）：远程私有库的基本使用/使用私有库-安装成功.png)
-![成功添加组件内容](http://linxunfeng.github.io/images/2018/04/iOS 组件化开发（一）：远程私有库的基本使用/使用私有库-成功添加组件内容.png)
+![安装成功](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（一）：远程私有库的基本使用/使用私有库-安装成功.png)
+![成功添加组件内容](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（一）：远程私有库的基本使用/使用私有库-成功添加组件内容.png)
 
