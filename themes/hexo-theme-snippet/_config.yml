@@ -227,22 +227,22 @@ visit_counter:
 ## 网站访问统计分析
 
 ### 网盟CNZZ统计
-cnzz_analytics: 1263868967
+cnzz_analytics: 5c2b44ddf1f55668630000b8
 
 ### 百度统计
 baidu_analytics:
 
 ### 谷歌统计
-google_analytics:
+google_analytics: UA-131541294-1
 
 ### 腾讯分析
-tencent_analytics:
+tencent_analytics: 66150761
 
 ### 百度站点认证
-baidu_site_verification:
+baidu_site_verification: 9LgZ2AlWYS
 
 ### 百度自动推送
-baidu_push: false
+baidu_push: true
 
 #网站主题配置
 since: 2017
