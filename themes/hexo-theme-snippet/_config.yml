@@ -17,6 +17,12 @@ menu:
 - page: Linux
   url: /categories/Linux/
   icon:
+- page: 算法
+  url: /categories/Algorithm/
+  icon:
+- page: 其它
+  url: /categories/Others/
+  icon:
 # - page: 资源
 #   url: /categories/资源/
   # icon:
