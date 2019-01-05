@@ -23,7 +23,7 @@ read_more: Read
 home: Home
 archives: Archives
 about: About
-search_local: localSearch
+search_local: 站内搜索 #localSearch
 search_google: googleSearch
 search_placeholder: Search What？
 author: Author

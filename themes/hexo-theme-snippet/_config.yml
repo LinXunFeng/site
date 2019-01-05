@@ -17,9 +17,9 @@ menu:
 - page: Linux
   url: /categories/Linux/
   icon:
-- page: 算法
-  url: /categories/Algorithm/
-  icon:
+# - page: 算法
+#   url: /categories/Algorithm/
+#   icon:
 - page: 其它
   url: /categories/Others/
   icon:
@@ -75,7 +75,7 @@ social:
    href: //github.com/LinXunFeng
  - name: 邮箱
    icon: envelope-o
-   href: mailto:598600855@qq.com
+   href: mailto:xunfenghellolo@gmail.com
 #  - name: 联系QQ
 #    icon: qq
 #    href: /
