@@ -64,7 +64,7 @@ jsonContent:
 
 ## 网站公告设置
 notification: |-
-            <div class="clock" style="margin-top: 17px;">
+            <div class="clock">
               <div style="margin:10px auto 10px auto; overflow:hidden;">
                 <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="300" height="100">
                   <param name="movie" value="./img/flash/clock.swf">
@@ -84,9 +84,12 @@ notification: |-
                 </object>
               </div>
             </div>
-            <p>
-              欢迎访问 LinXunFeng 的博客~ 🚀🚀🚀
-            </p>
+            <div class="content" style="margin: 0 auto;">
+              <p>
+                欢迎访问 LinXunFeng 的博客~ 🚀🚀🚀
+              </p>
+            </div>
+            
 
 ## 社交设置
 social:
