@@ -65,7 +65,6 @@ jsonContent:
 ## 网站公告设置
 notification: |-
             <div>  
-              <h1>人体时钟</h1>  
               <div>  
                 <center>
                   <script charset="Shift_JIS" src="http://chabudai.sakura.ne.jp/blogparts/honehoneclock/honehone_clock_wh.js"></script>  
