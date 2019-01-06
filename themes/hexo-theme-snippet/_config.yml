@@ -72,12 +72,12 @@ notification: |-
               </div>  
             </div>  
             <div class="time" style="margin-top: 17px;">
-              <div style="width:300px; height:200px; margin:10px auto 10px auto; overflow:hidden;">
-                <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="200" height="88">
+              <div style="margin:10px auto 10px auto; overflow:hidden;">
+                <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="300" height="200">
                   <param name="movie" value="./img/hamster.swf">
                   <param name="quality" value="high">
                   <param name="wmode" value="transparent">
-                  <embed src="./img/hamster.swf" quality="high" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="200" height="88">
+                  <embed src="./img/hamster.swf" quality="high" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="300" height="200">
                 </object>
               </div>
             </div>
