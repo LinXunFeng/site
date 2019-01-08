@@ -1,4 +1,11 @@
 <header class="main-header" <% if(theme.banner.img){ %> style="background-image:url(<%= url_for(theme.banner.img) %>)" <%}%> >
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-2509001303988281",
+        enable_page_level_ads: true
+    });
+    </script>
     <div class="main-header-box">
         <a class="header-avatar" href="/" title='<%= config.author %>'>
             <%- image_tag('img/avatar.jpg',{alt:'logo头像',class:'img-responsive center-block'}) %>
