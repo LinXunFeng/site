@@ -191,7 +191,7 @@ MoyaMapper是基于Moya和SwiftyJSON封装的工具，以Moya的plugin的方式�
 
 
 
-![JSON数据对照](http://linxunfeng.github.io/images/2018/05/打造Moya便捷解析库，提供RxSwift拓展/JSON数据对照.png)
+![JSON数据对照](/images/2018/05/打造Moya便捷解析库，提供RxSwift拓展/JSON数据对照.png)
 
 ### 1、定义并注入自定义键名类
 1. 定义一个遵守ModelableParameterType协议的结构体
