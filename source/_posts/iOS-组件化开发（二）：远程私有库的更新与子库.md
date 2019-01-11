@@ -22,7 +22,7 @@ tags:
 
 这里以对基础组件里添加了一个Cache工具为例
 
-![添加Cache工具](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（二）：远程私有库的更新与子库/添加Cache工具.png)
+![添加Cache工具](https://linxunfeng.github.io/images/2018/04/iOS-组件化开发（二）：远程私有库的更新与子库/添加Cache工具.png)
 
 添加完成后我们需要更新到远程仓库
 
@@ -35,7 +35,7 @@ git add .
 git commit -m '更新描述'
 git push origin master
 ```
-![代码升级](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（二）：远程私有库的更新与子库/代码升级.png)
+![代码升级](https://linxunfeng.github.io/images/2018/04/iOS-组件化开发（二）：远程私有库的更新与子库/代码升级.png)
 
 
 ### 2、版本更新
@@ -46,10 +46,10 @@ git push origin master
 git tag -a '新版本号' -m '注释'
 git push --tags
 ```
-![版本升级](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（二）：远程私有库的更新与子库/版本升级.png)
+![版本升级](https://linxunfeng.github.io/images/2018/04/iOS-组件化开发（二）：远程私有库的更新与子库/版本升级.png)
 
 查看远程仓库，标签数已经有2个了，点进去就可以看到0.2.0，这里我们就不去看了
-![](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（二）：远程私有库的更新与子库/2个标签.png)
+![](https://linxunfeng.github.io/images/2018/04/iOS-组件化开发（二）：远程私有库的更新与子库/2个标签.png)
 
 
 ## 二、修改描述文件并更新索引库
@@ -66,14 +66,14 @@ git push --tags
 pod spec lint --private
 ```
 
-![验证远程Spec](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（二）：远程私有库的更新与子库/验证远程Spec.png)
+![验证远程Spec](https://linxunfeng.github.io/images/2018/04/iOS-组件化开发（二）：远程私有库的更新与子库/验证远程Spec.png)
 
 
 ### 3、更新索引库
 ```
 pod repo push 索引库名称 xxx.podspec
 ```
-![更新索引库](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（二）：远程私有库的更新与子库/更新索引库.png)
+![更新索引库](https://linxunfeng.github.io/images/2018/04/iOS-组件化开发（二）：远程私有库的更新与子库/更新索引库.png)
 
 
 ## 三、更新使用
@@ -82,9 +82,9 @@ pod repo push 索引库名称 xxx.podspec
 // 因为刚刚已经自己手动更新过了，所以这里我们选择跳过更新
 pod update --no-repo-update
 ```
-![更新框架](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（二）：远程私有库的更新与子库/更新框架.png)
+![更新框架](https://linxunfeng.github.io/images/2018/04/iOS-组件化开发（二）：远程私有库的更新与子库/更新框架.png)
 
-![更新成功](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（二）：远程私有库的更新与子库/更新成功.png)
+![更新成功](https://linxunfeng.github.io/images/2018/04/iOS-组件化开发（二）：远程私有库的更新与子库/更新成功.png)
 
 <hr>
 
@@ -109,7 +109,7 @@ s.dependency 'SDWebImage', '~> 4.3.3'
 pod search 'SDWebImage'
 ```
 
-![Subspecs](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（二）：远程私有库的更新与子库/Subspecs.png)
+![Subspecs](https://linxunfeng.github.io/images/2018/04/iOS-组件化开发（二）：远程私有库的更新与子库/Subspecs.png)
 
 可以看到，如果我们只需要用到SDWebImage中的GIF功能，那么并不需要将整个SDWebImage都下载下来，在Podfile中将~~`pod 'SDWebImage' `~~ 改为 `pod SDWebImage/GIF`即可单独使用这一功能
 
@@ -154,7 +154,7 @@ pod spec lint --private --verbose
 pod search 'LXFBase'
 ```
 
-![subspec添加成功](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（二）：远程私有库的更新与子库/subspec添加成功.png)
+![subspec添加成功](https://linxunfeng.github.io/images/2018/04/iOS-组件化开发（二）：远程私有库的更新与子库/subspec添加成功.png)
 
 现在就可以爱装哪个就装哪个了，在Podfile中指定要安装的子库就行了
 ```
@@ -165,5 +165,5 @@ pod 'LXFBase/Cache'
 pod install
 ```
 
-![安装指定子库与依赖库](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（二）：远程私有库的更新与子库/安装指定子库与依赖库.png)
+![安装指定子库与依赖库](https://linxunfeng.github.io/images/2018/04/iOS-组件化开发（二）：远程私有库的更新与子库/安装指定子库与依赖库.png)
 

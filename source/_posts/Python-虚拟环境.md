@@ -20,7 +20,7 @@ tags:
 
 我们可以在当前用户的家目录中找到【.virtualenvs】文件夹，查看当前所有的虚拟环境
 
-![virtualenvs](http://linxunfeng.github.io/images/2018/04/Python-虚拟环境/virtualenvs.png)
+![virtualenvs](https://linxunfeng.github.io/images/2018/04/Python-虚拟环境/virtualenvs.png)
 
 
 ## 创建虚拟环境
@@ -30,23 +30,23 @@ tags:
 mkvirtualenv lxfenv1
 ```
 
-![安装成功](http://linxunfeng.github.io/images/2018/04/Python-虚拟环境/mkvirtualenv.png)
+![安装成功](https://linxunfeng.github.io/images/2018/04/Python-虚拟环境/mkvirtualenv.png)
 
 注：创建的过程需要联网
 
-![目录结构](http://linxunfeng.github.io/images/2018/04/Python-虚拟环境/目录结构.png)
+![目录结构](https://linxunfeng.github.io/images/2018/04/Python-虚拟环境/目录结构.png)
 
 ```
 Installing setuptools, pkg_resources, pip, wheel...done.
 ```
 刚刚安装时提示安装的这些东西就存放在你创建好的虚拟环境下的【lib/python2.7/site-packages/】目录中
 
-![lib目录](http://linxunfeng.github.io/images/2018/04/Python-虚拟环境/lib目录.png)
+![lib目录](https://linxunfeng.github.io/images/2018/04/Python-虚拟环境/lib目录.png)
 
 - 退出：deactivate
 当我们安装好虚拟环境后默认就使用了该虚拟环境，如图标识处可以看出
 
-![当前环境](http://linxunfeng.github.io/images/2018/04/Python-虚拟环境/当前环境.png)
+![当前环境](https://linxunfeng.github.io/images/2018/04/Python-虚拟环境/当前环境.png)
 
 如果你想退出当前的虚拟环境，或以使用如下命令：
 
@@ -54,7 +54,7 @@ Installing setuptools, pkg_resources, pip, wheel...done.
 deactivate
 ```
 
-![退出环境](http://linxunfeng.github.io/images/2018/04/Python-虚拟环境/退出环境.png)
+![退出环境](https://linxunfeng.github.io/images/2018/04/Python-虚拟环境/退出环境.png)
 
 
 - 进入：workon [虚拟环境名称]
@@ -65,7 +65,7 @@ deactivate
 workon lxfenv1
 ```
 
-![workon](http://linxunfeng.github.io/images/2018/04/Python-虚拟环境/workon.png)
+![workon](https://linxunfeng.github.io/images/2018/04/Python-虚拟环境/workon.png)
 
 
 - 删除：rmvirtualenv [虚拟环境名称]
@@ -83,7 +83,7 @@ pip list
 pip freeze
 ```
 
-![查看当前安装好的包](http://linxunfeng.github.io/images/2018/04/Python-虚拟环境/查看当前安装好的包.png)
+![查看当前安装好的包](https://linxunfeng.github.io/images/2018/04/Python-虚拟环境/查看当前安装好的包.png)
 
 ps: 上图`pip list`中列出的四个包是安装虚拟环境必定会安装的包
 如图，`pip list`会列出所有的包，而`pip freeze`只会列出扩展的包
@@ -97,4 +97,4 @@ pip install django==1.8.2
 
 如果不知道包名可以到[pypi](https://pypi.python.org)上搜索
 
-![安装指定的包](http://linxunfeng.github.io/images/2018/04/Python-虚拟环境/安装指定的包.png)
+![安装指定的包](https://linxunfeng.github.io/images/2018/04/Python-虚拟环境/安装指定的包.png)

@@ -174,7 +174,7 @@ vmOutput?.autoSetRefreshHeaderStatus(header: refreshHeader, footer: nil).dispose
 
 三、viewModel中根据实际情况实时更新 refreshStatus 的刷新状态
 
-![image.png](http://linxunfeng.github.io/images/2017/10/RxSwift-MJExtension-打造自动处理刷新控件状态/1.png)
+![image.png](https://linxunfeng.github.io/images/2017/10/RxSwift-MJExtension-打造自动处理刷新控件状态/1.png)
 
 ## 案例
 协议：[Refreshable.swift](https://github.com/LinXunFeng/LXFBiliBili/blob/master/LXFBiliBili/LXFBiliBili/Classes/Common/Protocol/Lib/Refreshable.swift)
@@ -184,4 +184,4 @@ Controller：[LXFLiveViewController](https://github.com/LinXunFeng/LXFBiliBili/b
 [LXFBiliBili](https://github.com/LinXunFeng/LXFBiliBili)
 
 
-![LXFBiliBili](http://linxunfeng.github.io/images/2017/10/RxSwift-MJExtension-打造自动处理刷新控件状态/2.gif)
+![LXFBiliBili](https://linxunfeng.github.io/images/2017/10/RxSwift-MJExtension-打造自动处理刷新控件状态/2.gif)

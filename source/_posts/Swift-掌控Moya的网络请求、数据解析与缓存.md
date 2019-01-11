@@ -44,7 +44,7 @@ tags:
 
 附：[插件 MoyaMapperPlugin 的详细使用](https://moyamapper.github.io/plugin/)
 
-![](http://linxunfeng.github.io/images/2018/10/Swift-掌控Moya的网络请求、数据解析与缓存/success-obj.png)
+![](https://linxunfeng.github.io/images/2018/10/Swift-掌控Moya的网络请求、数据解析与缓存/success-obj.png)
 
 1、定义适用于项目接口的 `ModelableParameterType`
 
@@ -143,7 +143,7 @@ struct UserModel: Modelable {
 
 
 
-![](http://linxunfeng.github.io/images/2018/10/Swift-掌控Moya的网络请求、数据解析与缓存/success-obj.png)
+![](https://linxunfeng.github.io/images/2018/10/Swift-掌控Moya的网络请求、数据解析与缓存/success-obj.png)
 
 
 
@@ -168,7 +168,7 @@ rxRequest.mapObject(MMModel.self)
 
 
 
-![](http://linxunfeng.github.io/images/2018/10/Swift-掌控Moya的网络请求、数据解析与缓存/success-array.png)
+![](https://linxunfeng.github.io/images/2018/10/Swift-掌控Moya的网络请求、数据解析与缓存/success-array.png)
 
 
 
@@ -196,7 +196,7 @@ rxRequest.mapArray(MMModel.self)
 
 
 
-![](http://linxunfeng.github.io/images/2018/10/Swift-掌控Moya的网络请求、数据解析与缓存/fail.png)
+![](https://linxunfeng.github.io/images/2018/10/Swift-掌控Moya的网络请求、数据解析与缓存/fail.png)
 
 
 
@@ -240,7 +240,7 @@ transformError : Bool  是否当网络请求失败时，自动转换请求结果
 
 
 
-![](http://linxunfeng.github.io/images/2018/10/Swift-掌控Moya的网络请求、数据解析与缓存/success-obj.png)
+![](https://linxunfeng.github.io/images/2018/10/Swift-掌控Moya的网络请求、数据解析与缓存/success-obj.png)
 
 
 
@@ -253,7 +253,7 @@ transformError : Bool  是否当网络请求失败时，自动转换请求结果
 
 
 
-![](http://linxunfeng.github.io/images/2018/10/Swift-掌控Moya的网络请求、数据解析与缓存/plugin.png)
+![](https://linxunfeng.github.io/images/2018/10/Swift-掌控Moya的网络请求、数据解析与缓存/plugin.png)
 
 
 

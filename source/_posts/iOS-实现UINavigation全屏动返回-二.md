@@ -81,14 +81,14 @@ for (int i = 0; i<count; i++) {
  free(ivars);
 ```
 在打印中我们找到了UIGestureRecognizer的私有属性 _targets，是个数组，而且只有一个元素，元素的类型如图所示
-![target](http://linxunfeng.github.io/images/2017/09/iOS-实现UINavigation全屏动返回-二/1.png)
+![target](https://linxunfeng.github.io/images/2017/09/iOS-实现UINavigation全屏动返回-二/1.png)
 那就好办了，这样我们就可以得到target了
 ```objc
 NSArray *targets = [gest valueForKeyPath:@"_targets"]; // 打印可以发现里面就一个元素
 id target = [targets[0] valueForKeyPath:@"_target"];
 ```
 这样我们就差不多实现全屏滑动返回的功能，但是有个bug
-![向右滑动，接着点击Button](http://linxunfeng.github.io/images/2017/09/iOS-实现UINavigation全屏动返回-二/2.gif)
+![向右滑动，接着点击Button](https://linxunfeng.github.io/images/2017/09/iOS-实现UINavigation全屏动返回-二/2.gif)
 如图所示，在最后里回到根控制器界面后我再一次向右滑动，接着点击Button，它没有将FirstVC弹出，这就是传说中的bug，那我们现在在做的，就是在根控制器不让滑动返回生效，即禁用手势。
 监听手势，遵守协议UIGestureRecognizerDelegate，实现代理方法
 

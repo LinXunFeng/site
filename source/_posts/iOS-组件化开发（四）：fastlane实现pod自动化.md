@@ -17,7 +17,7 @@ tags:
 +<!-- more -->
 <The rest of contents | 余下全文>
 
-![](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（四）：fastlane实现pod自动化/fastlane.png)
+![](https://linxunfeng.github.io/images/2018/04/iOS-组件化开发（四）：fastlane实现pod自动化/fastlane.png)
 
 > 在第一次组件化的时候，需要执行很多操作，这些操作可以在【[iOS-组件化开发（一）：远程私有库的基本使用](http://linxunfeng.top/2018/04/06/iOS-组件化开发（一）：远程私有库的基本使用/)】，这里就不再赘述，在组件化后的重复性操作就是升级，而升级这个过程是一模一样的。那么，我们有什么办法可以很方便的搞定这一过程来节约我们大量的时间呢？
 
@@ -73,7 +73,7 @@ mkdir fastlane
 cd fastlane
 touch Fastfile
 ```
-![目录结构](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（四）：fastlane实现pod自动化/目录结构.png)
+![目录结构](https://linxunfeng.github.io/images/2018/04/iOS-组件化开发（四）：fastlane实现pod自动化/目录结构.png)
 
 ### 1、修改Fastfile
 ```
@@ -89,10 +89,10 @@ end
 ```
 
 航道上要扫描的操作可以到[Actions](https://docs.fastlane.tools/actions)上查找，可以通过关键字搜索，如下图
-![cocoapods](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（四）：fastlane实现pod自动化/cocoapods.png)
+![cocoapods](https://linxunfeng.github.io/images/2018/04/iOS-组件化开发（四）：fastlane实现pod自动化/cocoapods.png)
 点进去可以看到具体的使用及参数说明
 
-![使用说明](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（四）：fastlane实现pod自动化/使用说明.png)
+![使用说明](https://linxunfeng.github.io/images/2018/04/iOS-组件化开发（四）：fastlane实现pod自动化/使用说明.png)
 
 这里附上本人的Fastfile内容：
 ```
@@ -142,20 +142,20 @@ end
 ```
 fastlane lanes
 ```
-![Fastfile验证成功](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（四）：fastlane实现pod自动化/Fastfile验证成功.png)
+![Fastfile验证成功](https://linxunfeng.github.io/images/2018/04/iOS-组件化开发（四）：fastlane实现pod自动化/Fastfile验证成功.png)
 
 ### 3、执行fastlane
 
 **需要在组件仓库的根目录下执行**
-![根目录](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（四）：fastlane实现pod自动化/根目录.png)
+![根目录](https://linxunfeng.github.io/images/2018/04/iOS-组件化开发（四）：fastlane实现pod自动化/根目录.png)
 
 
 ```
 fastlane LXFUpdatePodTool tag:0.1.1 specName:LXFMain
 ```
-![开始执行](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（四）：fastlane实现pod自动化/开始执行.png)
+![开始执行](https://linxunfeng.github.io/images/2018/04/iOS-组件化开发（四）：fastlane实现pod自动化/开始执行.png)
 
-![上传完成](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（四）：fastlane实现pod自动化/上传完成.png)
+![上传完成](https://linxunfeng.github.io/images/2018/04/iOS-组件化开发（四）：fastlane实现pod自动化/上传完成.png)
 
 整个执行过程不超过30秒～
 
@@ -167,10 +167,10 @@ fastlane LXFUpdatePodTool tag:0.1.1 specName:LXFMain
 fastlane new_action
 ```
 按要求输入Action名称
-![输入action名称](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（四）：fastlane实现pod自动化/输入action名称.png)
+![输入action名称](https://linxunfeng.github.io/images/2018/04/iOS-组件化开发（四）：fastlane实现pod自动化/输入action名称.png)
 
 完成后fastlane目录下就会多出一个名为actions的文件夹，里面存放的就是你自定义action
-![](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（四）：fastlane实现pod自动化/actions文件夹.png)
+![](https://linxunfeng.github.io/images/2018/04/iOS-组件化开发（四）：fastlane实现pod自动化/actions文件夹.png)
 
 ### 2、编辑自定义action
 打开remove_git_tag.rb，开始自定义我们的action吧，什么？不会语法怎么办？可以参考别人的嘛，上面给出的[action的源码地址](https://github.com/fastlane/fastlane/tree/master/fastlane/lib/fastlane/actions)就有用武之地了，比如[pod_push](https://github.com/fastlane/fastlane/blob/master/fastlane/lib/fastlane/actions/pod_push.rb)。这里我直接贴出我已经完成的主要代码
@@ -244,7 +244,7 @@ end
 ```
 fastlane action remove_git_tag
 ```
-![查看具体描述](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（四）：fastlane实现pod自动化/查看具体描述.png)
+![查看具体描述](https://linxunfeng.github.io/images/2018/04/iOS-组件化开发（四）：fastlane实现pod自动化/查看具体描述.png)
 
 
 ### 4、测试执行
@@ -253,13 +253,13 @@ fastlane action remove_git_tag
 ```
 git tag
 ```
-![已存在的tag](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（四）：fastlane实现pod自动化/已存在的tag.png)
+![已存在的tag](https://linxunfeng.github.io/images/2018/04/iOS-组件化开发（四）：fastlane实现pod自动化/已存在的tag.png)
 
 可以看到，我是已经有一个`0.1.1`版本的了。这时我们再来执行一次LXFUpdatePodTool航道
 ```
 fastlane LXFUpdatePodTool tag:0.1.1 specName:LXFMain
 ```
-![自动清除](http://linxunfeng.github.io/images/2018/04/iOS-组件化开发（四）：fastlane实现pod自动化/自动清除.png)
+![自动清除](https://linxunfeng.github.io/images/2018/04/iOS-组件化开发（四）：fastlane实现pod自动化/自动清除.png)
 
 ## 五、工具拿走
 [LXFUpdatePodTool](https://github.com/LinXunFeng/LXFUpdatePodTool) 已经传到我的GitHub上，需要的同学就拿走吧，顺手给个Star咯 Orz

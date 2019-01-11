@@ -78,18 +78,18 @@ Objective-C是一个全动态语言，它的一切都是基于runtime实现的�
 新建一个Command Line Tool项目，将以上代码放入main.m中，如图
 
 
-![main.m](http://linxunfeng.github.io/images/2017/09/iOS-揭露Block的内部实现原理/1.png)
+![main.m](https://linxunfeng.github.io/images/2017/09/iOS-揭露Block的内部实现原理/1.png)
 
 这里我们打开终端，cd到项目目录下，然后将用下面的命令将OC重写为C
 ```
 clang -rewrite-objc main.m
 ```
 
-![rewrite-objc](http://linxunfeng.github.io/images/2017/09/iOS-揭露Block的内部实现原理/2.png)
+![rewrite-objc](https://linxunfeng.github.io/images/2017/09/iOS-揭露Block的内部实现原理/2.png)
 这时我们可以发现当前目录下多了一个main.cpp文件，打开它并滚到最下面
-![打开main.cpp](http://linxunfeng.github.io/images/2017/09/iOS-揭露Block的内部实现原理/3.png)
+![打开main.cpp](https://linxunfeng.github.io/images/2017/09/iOS-揭露Block的内部实现原理/3.png)
 
-![main.cpp](http://linxunfeng.github.io/images/2017/09/iOS-揭露Block的内部实现原理/4.png)
+![main.cpp](https://linxunfeng.github.io/images/2017/09/iOS-揭露Block的内部实现原理/4.png)
 这里我们可以看到blockFunc1的C语言实现方法
 
 ```c
@@ -117,14 +117,14 @@ void blockFunc1()
 > block实际上是指向结构体的指针
 
 该结构体为
-![__blockFunc1_block_impl_0](http://linxunfeng.github.io/images/2017/09/iOS-揭露Block的内部实现原理/5.png)
+![__blockFunc1_block_impl_0](https://linxunfeng.github.io/images/2017/09/iOS-揭露Block的内部实现原理/5.png)
 
 我们来看下带__block的blockFunc2
 
-![blockFunc2](http://linxunfeng.github.io/images/2017/09/iOS-揭露Block的内部实现原理/6.png)
+![blockFunc2](https://linxunfeng.github.io/images/2017/09/iOS-揭露Block的内部实现原理/6.png)
 在 blockFunc1 中，block指向了一个名为__blockFunc1_block_impl_0的结构体，并且在初始化时输入了三个参数(__blockFunc1_block_impl_0最后的flags有默认参数，所以可以不用传参)，第三个参数就是我们写的num，与blockFunc2相比较，这里的num并没有带*号，所以说在这里它只是传值而非传址，而下面的【num = 200;】也就没什么卵用了。这就是blockFunc2、blockFunc3与blockFunc4为什么能打印出num改变后的值，而blockFunc1不行的原因。
 
-![](http://linxunfeng.github.io/images/2017/09/iOS-揭露Block的内部实现原理/7.png)
+![](https://linxunfeng.github.io/images/2017/09/iOS-揭露Block的内部实现原理/7.png)
 
 在这里我们也可以看出：
 > 编译器会将block的内部代码生成对应的函数
@@ -145,7 +145,7 @@ __Block_byref_num_0 *__forwarding;  // 实例本身
 };
 ```
 
-![](http://linxunfeng.github.io/images/2017/09/iOS-揭露Block的内部实现原理/8.png)
+![](https://linxunfeng.github.io/images/2017/09/iOS-揭露Block的内部实现原理/8.png)
 图片对应着blockFunc2中的
 
 ```

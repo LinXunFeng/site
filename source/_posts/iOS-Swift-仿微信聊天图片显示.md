@@ -18,11 +18,11 @@ tags:
 ## 效果图
 
 如图所示，图片左侧有个小箭头
-![效果图](http://linxunfeng.github.io/images/2017/09/iOS-Swift 仿微信聊天图片显示/1.png)
+![效果图](https://linxunfeng.github.io/images/2017/09/iOS-Swift 仿微信聊天图片显示/1.png)
 
 ## 原理
 其实原理比较简单，准备一张图片MaskImgae，先对其进行拉伸，然后按照其轮廓对图片进行裁剪就行了
-![MaskImgae](http://linxunfeng.github.io/images/2017/09/iOS-Swift 仿微信聊天图片显示/2.png)
+![MaskImgae](https://linxunfeng.github.io/images/2017/09/iOS-Swift 仿微信聊天图片显示/2.png)
 
 ## 步骤
 这里摘重点说，布局什么的按自己意愿去弄吧。我固定了图片的显示大小为 102 * 152
@@ -36,7 +36,7 @@ let stretchImage = UIImage(named: "SenderImageNodeMask")
 let bubbleMaskImage = stretchImage.resizableImage(withCapInsets: stretchInsets, resizingMode: .stretch)
 ```
 拉伸的效果如图
-![拉伸效果](http://linxunfeng.github.io/images/2017/09/iOS-Swift 仿微信聊天图片显示/3.png)
+![拉伸效果](https://linxunfeng.github.io/images/2017/09/iOS-Swift 仿微信聊天图片显示/3.png)
 
 ### 2、对imageView设置裁剪区域
 这里我的 imageView 叫   chatImgView
@@ -82,7 +82,7 @@ MaskImgae 的大小为 56 * 50
 UIEdgeInsetsMake(30, 28, 23, 28)
 ```
 红色范围就是要拉伸的范围(随手一扣，不太准确，意思意思下就好了~~)
-![拉伸区域](http://linxunfeng.github.io/images/2017/09/iOS-Swift 仿微信聊天图片显示/4.png)
+![拉伸区域](https://linxunfeng.github.io/images/2017/09/iOS-Swift 仿微信聊天图片显示/4.png)
 
 ### contentsCenter
 这是对某个区域进行全面拉伸，如果不设置的话默认值为
@@ -91,7 +91,7 @@ CGRect(x: 0, y: 0, width: 1, height: 1)
 ```
 就是直接进行缩放
 那我们先来看看，如果不对contentsCenter这个值进行设置会是什么效果
-![直接拉伸](http://linxunfeng.github.io/images/2017/09/iOS-Swift 仿微信聊天图片显示/5.png)
+![直接拉伸](https://linxunfeng.github.io/images/2017/09/iOS-Swift 仿微信聊天图片显示/5.png)
 我们来看下官方解释
 
 ```swift
@@ -124,7 +124,7 @@ UIEdgeInsets(top: 30.0, left: 28.0, bottom: 23.0, right: 28.0)
 28.0
 ```
 好，现在结合 下面的图 与 CGRectCenterRectForResizableImage 方法中的代码就很明确比例是怎么取到的了
-![拉伸区域](http://linxunfeng.github.io/images/2017/09/iOS-Swift 仿微信聊天图片显示/6.png)
+![拉伸区域](https://linxunfeng.github.io/images/2017/09/iOS-Swift 仿微信聊天图片显示/6.png)
 
 附上相关项目：[Swift 3.0 高仿微信](https://github.com/LinXunFeng/LXFWeChat)
 

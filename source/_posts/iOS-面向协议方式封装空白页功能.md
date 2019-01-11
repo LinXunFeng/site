@@ -174,7 +174,7 @@ extension LXFEmptyDemoController: LXFEmptyDataSetable {
 }
 ```
 
-![大功告成](http://linxunfeng.github.io/images/2018/04/iOS-面向协议方式封装空白页功能/lxf_EmptyDataSet.png)
+![大功告成](https://linxunfeng.github.io/images/2018/04/iOS-面向协议方式封装空白页功能/lxf_EmptyDataSet.png)
 
 ## 三、开源库
 
