@@ -65,7 +65,7 @@ jsonContent:
 ## 网站公告设置
 notification: |-
             <div>
-              <img src="/images/otherswx/wxQR.png" height="300" width="300" />
+              <img src="/images/others/wx/wxQR.png" height="300" width="300" />
               <center>欢迎关注微信公众号：linxunfengtop</center>
             </div>
             <div class="clock">
