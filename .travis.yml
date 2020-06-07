@@ -1,44 +1,37 @@
 language: node_js
-node_js: stable
-
-sudo: false
-
-#cache
-cache:
-  directories:
-    - "node_modules"
-
-notifications:
-  email:
-    recipients:
-      - 598600855@qq.com
-    on_success: never
-    on_failure: always
+node_js:
+  - "11.12.0"
 
 # S: Build Lifecycle
 install:
   - npm install
-#  - gem install travis
-#  - travis login --pro --github-token ${GH_TOKEN}
-
-before_script:
-  - export TZ='Asia/Shanghai'
-  - chmod +x _travis.sh
 
 script:
-  - hexo clean && hexo g
-
-after_success:
- # - LAST_BUILD_NUMBER=68
- # - for i in $(seq 1 $LAST_BUILD_NUMBER ); do  travis logs $i --delete --force ; done
+  - hexo clean
+  - hexo g
 
 after_script:
-  - ./_travis.sh
+  - cd ./public
+  - git init
+  - git config user.name "LinXunFeng"
+  - git config user.email "598600855@qq.com"
+  - git add .
+  - git commit -m "Update Blog By TravisCI With Build $TRAVIS_BUILD_NUMBER"
+  # Github Pages
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
+  # Coding Pages
+  - git push --force --quiet "https://dfz:${CO_TOKEN}@${CO_REF}" master:master
+  - git tag v0.0.$TRAVIS_BUILD_NUMBER -a -m "Auto Taged By TravisCI With Build $TRAVIS_BUILD_NUMBER"
+  # Github Pages
+  - git push --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages --tags
+  # Coding Pages
+  - git push --quiet "https://dfz:${CO_TOKEN}@${CO_REF}" master:master --tags
+
 
 branches:
   only:
     - master
-env:
- global:
-   - GH_REF: github.com/LinXunFeng/linxunfeng.github.io.git
 
+env:
+  global:
+   - GH_REF: github.com/LinXunFeng/linxunfeng.github.io.git
