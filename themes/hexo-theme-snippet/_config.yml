@@ -20,6 +20,9 @@ menu:
 # - page: 算法
 #   url: /categories/Algorithm/
 #   icon:
+- page: Flutter
+  url: /categories/Flutter/
+  icon:
 - page: 其它
   url: /categories/Others/
   icon:
