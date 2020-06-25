@@ -1,5 +1,5 @@
 ---
-title: Flutter - 打印Debug日志
+title: Flutter - 打印好用的Debug日志
 date: 2020-06-26 00:35:00
 categories: "Flutter"
 tags:
@@ -20,14 +20,14 @@ tags:
 
 我们回想在开发过程中，是不是发现只要一不小心抛异常，就可以看到类似如下的打印内容，而且还能清楚的知道异常是在哪个文件和哪一行的代码造成的。
 
-![](https://linxunfeng.github.io/images/2020/06/Flutter-打印Debug日志/抛异常.png)
+![](https://linxunfeng.github.io/images/2020/06/Flutter-打印好用的Debug日志/抛异常.png)
 
 > 所以如果我们可以在调用函数时拿到当前调用堆栈，就可以取到一系列想要的数据。
 
 ## 二、实践
 在 `dart:core` 中提供了 `堆栈跟踪(StackTrace)`，可以通过 `StackTrace.current` 取到当前的堆栈信息，打印如下图所示，会发现这不好拿到我们想要的信息。
 
-![](https://linxunfeng.github.io/images/2020/06/Flutter-打印Debug日志/StackTrace.png)
+![](https://linxunfeng.github.io/images/2020/06/Flutter-打印好用的Debug日志/StackTrace.png)
 
 这里我用到了官方开发的一个包 [stack_trace](https://pub.dev/packages/stack_trace)，它可以将堆栈信息变得更多人性化，并方便我们查看堆栈信息和获取想要的数据。
 
@@ -62,7 +62,7 @@ print("所在文件：${frame.uri} 所在行 ${frame.line} 所在列 ${frame.col
 
 完整的代码和示例请到GitHub上[【查看】](https://github.com/LinXunFeng/flutter_log)。
 
-![](https://linxunfeng.github.io/images/2020/06/Flutter-打印Debug日志/打印效果.png)
+![](https://linxunfeng.github.io/images/2020/06/Flutter-打印好用的Debug日志/打印效果.png)
 
 代码：
 ```dart
