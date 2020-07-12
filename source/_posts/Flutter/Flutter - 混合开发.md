@@ -181,7 +181,7 @@ self.present(flutterVc, animated: true, completion: nil)
 
 
 
-####使用 FlutterAppDelegate
+#### 使用 FlutterAppDelegate
 
 使用 `FlutterAppDelegate `这个不是必要的操作，但是如果你想让 `Flutter模块` 也能使用原生的功能的话，建议使用
 
