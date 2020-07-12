@@ -36,7 +36,7 @@ flutter create --template module flutter_module_lxf
 
 目录下有也有 `ios` 和 `android` 目录，只不过前面加了个点 ，成了点目录。
 
-![](https://linxunfeng.github.io/images/2020/07/Flutter-打印好用的Debug日志/混合开发iOS01.png)
+![](https://linxunfeng.github.io/images/2020/07/Flutter-混合开发/混合开发iOS01.png)
 
 
 
@@ -78,7 +78,7 @@ end
 
 添加完成后，执行一次 `pod install`
 
-混合开发混合开发![](https://linxunfeng.github.io/images/2020/07/Flutter-打印好用的Debug日志/混合开发iOS02.png)
+混合开发混合开发![](https://linxunfeng.github.io/images/2020/07/Flutter-混合开发/混合开发iOS02.png)
 
 ### 使用
 
@@ -144,13 +144,13 @@ func fetchFlutterEngine() -> FlutterEngine {
 }
 ```
 
-![](https://linxunfeng.github.io/images/2020/07/Flutter-打印好用的Debug日志/混合开发iOS04.jpg)
+![](https://linxunfeng.github.io/images/2020/07/Flutter-混合开发/混合开发iOS04.jpg)
 
 
 
 如果遇到报 `Command PhaseScriptExecution failed with a nonzero exit code` 错误，如下图所示：
 
-![](https://linxunfeng.github.io/images/2020/07/Flutter-打印好用的Debug日志/混合开发iOS03.png)
+![](https://linxunfeng.github.io/images/2020/07/Flutter-混合开发/混合开发iOS03.png)
 
 请先用 `Android Studio` 或 `VSCode` 打开 `Flutter模块` 项目并运行到iOS设备上，让其帮我们对iOS项目进行一些初始化配置。成功运行后就可以关闭 `Flutter模块` 项目的运行了，接着再用 `Xcode` 打开原生项目运行即可。
 
@@ -214,7 +214,7 @@ evaluate(new File(                                                     // new
 ))  
 ```
 
-![](https://linxunfeng.github.io/images/2020/07/Flutter-打印好用的Debug日志/混合开发iOS09.png)
+![](https://linxunfeng.github.io/images/2020/07/Flutter-混合开发/混合开发iOS09.png)
 
 修改安卓项目 `app` 目录下的 `build.gradle` 文件 
 
@@ -251,7 +251,7 @@ android {
 }
 ```
 
-![](https://linxunfeng.github.io/images/2020/07/Flutter-打印好用的Debug日志/混合开发iOS08.png)
+![](https://linxunfeng.github.io/images/2020/07/Flutter-混合开发/混合开发iOS08.png)
 
 修改 `app/src/main/AndroidManifest.xml` 文件
 
@@ -267,7 +267,7 @@ android {
   />
 ```
 
-![](https://linxunfeng.github.io/images/2020/07/Flutter-打印好用的Debug日志/混合开发iOS10.png)
+![](https://linxunfeng.github.io/images/2020/07/Flutter-混合开发/混合开发iOS10.png)
 
 添加一个按钮，点击弹出 `Flutter模块`
 
@@ -318,7 +318,7 @@ flutter attach
 
 如果当前有多个设备，会提示我们需要指定 `attach` 哪个设备
 
-![](https://linxunfeng.github.io/images/2020/07/Flutter-打印好用的Debug日志/混合开发iOS05.png)
+![](https://linxunfeng.github.io/images/2020/07/Flutter-混合开发/混合开发iOS05.png)
 
 按要求加上指定参数即可
 
@@ -326,7 +326,7 @@ flutter attach
 flutter attach -d FE305309-9E79-418D-BA3F-7EFECF2980BC
 ```
 
-![](https://linxunfeng.github.io/images/2020/07/Flutter-打印好用的Debug日志/混合开发iOS06.png)
+![](https://linxunfeng.github.io/images/2020/07/Flutter-混合开发/混合开发iOS06.png)
 
 如图，这样就关联上了，你在 `dart` 文件里面对界面进行任何修改后，按 `r` 进行热重载，按 `R` 进行热启动。
 
@@ -334,7 +334,7 @@ flutter attach -d FE305309-9E79-418D-BA3F-7EFECF2980BC
 
 如果你使用的是 `Android Studio`，可以直接选择对应的设备后，点击右边的 `Flutter Attach` 按钮，执行成功后就可以跟之前一样按 `Cmd + s` 进行热重载了。
 
-![](https://linxunfeng.github.io/images/2020/07/Flutter-打印好用的Debug日志/混合开发iOS07.png)
+![](https://linxunfeng.github.io/images/2020/07/Flutter-混合开发/混合开发iOS07.png)
 
 
 
