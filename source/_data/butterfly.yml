@@ -47,7 +47,7 @@ social:
 
 # Algolia search
 algolia_search:
-  enable: false
+  enable: true
   hits:
     per_page: 6
 
@@ -248,7 +248,7 @@ addtoany:
 # disqus
 # https://disqus.com/
 disqus:
-  enable: false
+  enable: true
   shortname:
   count: false # dispaly comment count in top_img
 
@@ -291,7 +291,7 @@ gitalk:
 # valine
 # https://valine.js.org
 valine:
-  enable: false # if you want use valine,please set this value is true
+  enable: true # if you want use valine,please set this value is true
   appId: 0rTljoibiQOAeo1tQ9qXExq9 # leancloud application app id
   appKey: 2N2gdmSHN6mIGpbmX8duHv6X # leancloud application app key
   pageSize: 10 # comment list page size
