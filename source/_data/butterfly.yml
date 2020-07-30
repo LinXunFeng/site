@@ -39,6 +39,8 @@ social:
   fab fa-github: https://github.com/LinXunFeng || Github
   fas fa-envelope: mailto:linxunfeng@yeah.net || Email
   fab fa-twitter: https://twitter.com/xunfenghellolo || Twitter
+  fab fa-blogger: https://juejin.im/user/58f8065e61ff4b006646c72d || 掘金
+  fab fa-blogger: https://www.jianshu.com/u/31e85e7a22a2 || 简书
 
 # search (搜索)
 # --------------------------------------
@@ -96,7 +98,7 @@ avatar:
 index_img:
 
 # if the banner of page not setting,it will show the top_img
-default_top_img: https://i.loli.net/2020/05/01/IuWi8QbHvzjlOPw.jpg
+default_top_img: /images/others/banner/banner_1.jpg # https://i.loli.net/2020/05/01/IuWi8QbHvzjlOPw.jpg
 
 # the banner image of archive page
 archive_img:
@@ -134,6 +136,7 @@ cover:
     - /images/others/cover/cover_5.jpg
     - /images/others/cover/cover_6.jpg
     - /images/others/cover/cover_7.jpg
+    - /images/others/cover/cover_8.jpg
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
