@@ -292,11 +292,11 @@ gitalk:
 # https://valine.js.org
 valine:
   enable: true # if you want use valine,please set this value is true
-  appId: 0rTljoibiQOAeo1tQ9qXExq9 # leancloud application app id
+  appId: 0rTljoibiQOAeo1tQ9qXExq9-gzGzoHsz # leancloud application app id
   appKey: 2N2gdmSHN6mIGpbmX8duHv6X # leancloud application app key
   pageSize: 10 # comment list page size
   avatar: monsterid # gravatar style https://valine.js.org/#/avatar
-  lang: en # i18n: zh-CN/zh-TW/en/ja
+  lang: zh-CN # i18n: zh-CN/zh-TW/en/ja
   placeholder: Please leave your footprints # valine comment input placeholder(like: Please leave your footprints )
   guest_info: nick,mail,link #valine comment header info (nick/mail/link)
   recordIP: false # Record reviewer IP
@@ -366,7 +366,7 @@ gitter:
 # Footer Settings
 # --------------------------------------
 
-since: 2020
+since: 2017
 
 footer_custom_text:
 
