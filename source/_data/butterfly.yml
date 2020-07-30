@@ -58,7 +58,7 @@ algolia_search:
 
 # Local search
 local_search:
-  enable: false
+  enable: true
   labels:
     input_placeholder: Search for Posts
     hits_empty: "We didn't find any results for the search: ${query}" # if there are no result
@@ -573,8 +573,8 @@ subtitle:
   # 開頭不允許轉義字元，如需要，請把整個句子用雙引號包住
   # 如果關閉打字效果，subtitle只會顯示sub的第一行文字
   sub:
-    - GitHub&#58 LinXunFeng
-    - 欢迎订阅我的微信公众号&#58 FullStackAction
+    - GitHub LinXunFeng
+    - 欢迎订阅我的微信公众号 FullStackAction
     - Never put off till tomorrow what you can do today
 
 # Loading Animation (加載動畫)
