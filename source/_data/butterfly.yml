@@ -39,7 +39,7 @@ social:
   fab fa-github: https://github.com/LinXunFeng || Github
   fas fa-envelope: mailto:linxunfeng@yeah.net || Email
   fab fa-twitter: https://twitter.com/xunfenghellolo || Twitter
-  # fab fa-blogger: https://juejin.im/user/58f8065e61ff4b006646c72d || Juejin
+  fab fa-blogger: https://juejin.im/user/58f8065e61ff4b006646c72d || Juejin
   # fab fa-blogger: https://www.jianshu.com/u/31e85e7a22a2 || Jianshu
 
 # search (搜索)
@@ -99,7 +99,7 @@ index_img:
 
 # if the banner of page not setting,it will show the top_img
 # https://i.loli.net/2020/05/01/IuWi8QbHvzjlOPw.jpg
-default_top_img: https://linxunfeng.top/images/others/banner/banner_1.jpeg
+default_top_img: /images/others/banner/banner_3.jpg
 
 # the banner image of archive page
 archive_img:
