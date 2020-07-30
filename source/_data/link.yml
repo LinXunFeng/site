@@ -1,0 +1,7 @@
+- class_name: 友情鏈接
+  class_desc: 小伙伴
+  link_list:
+    - name: zhengzeqin
+      link: https://zhengzeqin.netlify.app/
+      avatar: https://avatars0.githubusercontent.com/u/8444646?s=460&u=92eeef27cb894c8d36a516501f39941ab89cd7d0&v=4
+      descr: zhengzeqin's blogs

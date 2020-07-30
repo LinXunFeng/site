@@ -622,7 +622,7 @@ busuanzi:
 # Formal: Month/Day/Year Time or Year/Month/Day Time
 runtimeshow:
   enable: true
-  publish_date: 7/1/2017 00:00:00  
+  publish_date: 9/12/2017 00:00:00  
 
 # Bottom right button (右下角按鈕)
 # --------------------------------------
