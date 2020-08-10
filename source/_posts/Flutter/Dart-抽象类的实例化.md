@@ -76,7 +76,7 @@ final list = List();
 final dict = Map<String, dynamic>();
 ```
 我们来看一下 `Map` 的源码：
-![Map源码](https://linxunfeng.github.io/images/2020/06/Dart-抽象类的实例化/Map源码.png)
+![Map源码](/images/2020/06/Dart-抽象类的实例化/Map源码.png)
 
 `Map` 的确是抽象类，不过此时我们也注意到了，在 `Map` 这个抽象类中，定义了一个工厂构造方法，**这就是使抽象类可实例化的关键所在，因为工厂方法可以返回一个实例对象，但这个对象的类型不一定就是当前类!**
 
