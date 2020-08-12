@@ -60,7 +60,7 @@ Command PhaseScriptExecution failed with a nonzero exit code
 >
 > 方案二：先运行 `flutter build ios --release` ，再使用 `Xcode` 去打包
 
-这里我们是用 `Jenkins` 脚本进行打包，所以方案二不适用，方案一更新方便些
+这里我们是用 `Jenkins` 脚本进行打包，所以方案二不适用，方案一更加方便些
 
 ```shell
 # 设置Flutter的编译模式为release
