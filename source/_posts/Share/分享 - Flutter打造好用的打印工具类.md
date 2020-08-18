@@ -5,8 +5,8 @@ categories: "Share"
 tags:
   - Dart
   - Flutter
-top_img: /images/flags/flutter/1.jpg
-cover: https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/flutter-mark-square-100.png
+top_img: /images/flags/flutter/2.jpg
+cover: /images/flags/flutter/1.jpg
 ---
 
 <Excerpt in index | 首页摘要> 
@@ -131,8 +131,6 @@ log.error("models count -- \(models.count)")
 <center>
   <span style="font-size:300px; text-alignment:center">🤔</span>
 </center>
-
-
 
 
 
