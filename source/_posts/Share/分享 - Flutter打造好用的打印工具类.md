@@ -5,6 +5,8 @@ categories: "Share"
 tags:
   - Dart
   - Flutter
+top_img: /images/flags/flutter/1.jpg
+cover: https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/flutter-mark-square-100.png
 ---
 
 <Excerpt in index | 首页摘要> 
