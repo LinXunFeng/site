@@ -172,6 +172,75 @@ print("所在文件：${frame.uri} 所在行 ${frame.line} 所在列 ${frame.col
 // flutter: 所在文件：package:flutterlog/main.dart 所在行 55 所在列 23
 ```
 
+
+
+```dart
+import 'package:stack_trace/stack_trace.dart';
+
+// 将 StackTrace 对象转换成 Chain 对象
+// 当然，这里也可以直接用 Chain.current();
+// final chain = Chain.current();
+final chain = Chain.forTrace(StackTrace.current);
+
+print(chain);
+```
+
+打印内容：
+
+```dart
+flutter: package:flutter_test1/main.dart 79:17       _MyHomePageState.test_print
+package:flutter_test1/main.dart 38:5                 _MyHomePageState._incrementCounter
+package:flutter/src/material/ink_well.dart 779:19    _InkResponseState._handleTap
+package:flutter/src/material/ink_well.dart 862:36    _InkResponseState.build.<fn>
+package:flutter/src/gestures/recognizer.dart 182:24  GestureRecognizer.invokeCallback
+package:flutter/src/gestures/tap.dart 504:11         TapGestureRecognizer.handleTapUp
+package:flutter/src/gestures/tap.dart 282:5          BaseTapGestureRecognizer._checkUp
+package:flutter/src/gestures/tap.dart 254:7          BaseTapGestureRecognizer.acceptGesture
+package:flutter/src/gestures/arena.dart 156:27       GestureArenaManager.sweep
+package:flutter/src/gestures/binding.dart 222:20     GestureBinding.handleEvent
+package:flutter/src/gestures/binding.dart 198:22     GestureBinding.dispatchEvent
+package:flutter/src/gestures/binding.dart 156:7      GestureBinding._handle<…>
+```
+
+
+
+`Frame` 类的属性
+
+```dart
+/// A single stack frame. Each frame points to a precise location in Dart code.
+class Frame {
+  /// The URI of the file in which the code is located.
+  ///
+  /// This URI will usually have the scheme `dart`, `file`, `http`, or `https`.
+  final Uri uri;
+
+  /// The line number on which the code location is located.
+  ///
+  /// This can be null, indicating that the line number is unknown or
+  /// unimportant.
+  final int line;
+  
+  ...
+}
+```
+
+- `uri` : 获取代码所在文件的路径
+- `line` : 获取代码所在行
+
+
+
+打印 `uri` 看一下
+
+```dart
+print("${frame.uri.toString()}");
+
+// package:flutter_test1/main.dart
+```
+
+
+
+
+
 ## 三、呈上代码
 
 下面我做了一点封装，直接拿走即可使用，打印效果如下所示：
