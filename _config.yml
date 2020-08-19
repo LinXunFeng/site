@@ -81,9 +81,6 @@ search:
   field: post
   content: true
 
-plugins:
-  - hexo-algoliasearch
-
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
