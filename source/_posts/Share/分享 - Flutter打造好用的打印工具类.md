@@ -161,24 +161,6 @@ import 'package:stack_trace/stack_trace.dart';
 
 // 将 StackTrace 对象转换成 Chain 对象
 // 当然，这里也可以直接用 Chain.current();
-final chain = Chain.forTrace(StackTrace.current);
-// 拿出其中一条信息
-final frames = chain.toTrace().frames;
-final frame = frames[1];
-// 打印
-print("所在文件：${frame.uri} 所在行 ${frame.line} 所在列 ${frame.column}");
-
-// 打印结果
-// flutter: 所在文件：package:flutterlog/main.dart 所在行 55 所在列 23
-```
-
-
-
-```dart
-import 'package:stack_trace/stack_trace.dart';
-
-// 将 StackTrace 对象转换成 Chain 对象
-// 当然，这里也可以直接用 Chain.current();
 // final chain = Chain.current();
 final chain = Chain.forTrace(StackTrace.current);
 
@@ -202,7 +184,23 @@ package:flutter/src/gestures/binding.dart 198:22     GestureBinding.dispatchEven
 package:flutter/src/gestures/binding.dart 156:7      GestureBinding._handle<…>
 ```
 
+工具代码雏形：
 
+```dart
+import 'package:stack_trace/stack_trace.dart';
+
+// 将 StackTrace 对象转换成 Chain 对象
+// 当然，这里也可以直接用 Chain.current();
+final chain = Chain.forTrace(StackTrace.current);
+// 拿出其中一条信息
+final frames = chain.toTrace().frames;
+final frame = frames[1];
+// 打印
+print("所在文件：${frame.uri} 所在行 ${frame.line} 所在列 ${frame.column}");
+
+// 打印结果
+// flutter: 所在文件：package:flutterlog/main.dart 所在行 55 所在列 23
+```
 
 `Frame` 类的属性
 
@@ -220,24 +218,30 @@ class Frame {
   /// unimportant.
   final int line;
   
+  /// The name of the member in which the code location occurs.
+  ///
+  /// Anonymous closures are represented as `<fn>` in this member string.
+  final String member;
   ...
 }
 ```
 
 - `uri` : 获取代码所在文件的路径
 - `line` : 获取代码所在行
+- `member` : 获取所在方法
 
-
-
-打印 `uri` 看一下
+打印看一下 :
 
 ```dart
-print("${frame.uri.toString()}");
+// uri
+print("${frame.uri.toString()}");  // package:flutter_test1/main.dart
 
-// package:flutter_test1/main.dart
+// member
+print("${frame.member}"); // _MyHomePageState.scheduleAsync.<fn>
+
+// line
+print("${frame.line}"); // 97
 ```
-
-
 
 
 
