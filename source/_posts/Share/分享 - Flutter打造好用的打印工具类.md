@@ -247,11 +247,7 @@ print("${frame.line}"); // 97
 
 ## 三、呈上代码
 
-下面我做了一点封装，直接拿走即可使用，打印效果如下所示：
-
-完整的代码和示例请到GitHub上[【查看】](https://github.com/LinXunFeng/flutter_log)。
-
-![](/images/2020/06/Flutter-打印好用的Debug日志/打印效果.png)
+下面我做了一点封装，直接拿走即可使用，完整的代码和示例请到GitHub上[【查看】](https://github.com/LinXunFeng/flutter_log)。
 
 代码：
 ```dart
@@ -300,3 +296,22 @@ void FLog(dynamic msg, { FLogMode mode = FLogMode.debug }) {
   print("$modeStr ${frame.uri.toString().split("/").last}(${frame.line}) - $msg ");
 }
 ```
+
+
+
+## 使用
+
+```dart
+// 直接使用FLog
+FLog("flutter_log demo");
+
+// mode：打印模式（默认值为debug）
+FLog("flutter_log demo", mode: FLogMode.debug);
+FLog("flutter_log demo", mode: FLogMode.warning);
+FLog("flutter_log demo", mode: FLogMode.info);
+FLog("flutter_log demo", mode: FLogMode.error);
+```
+
+打印效果如下所示：
+
+![](/images/2020/06/Flutter-打印好用的Debug日志/打印效果.png)
