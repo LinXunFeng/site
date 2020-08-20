@@ -299,7 +299,7 @@ void FLog(dynamic msg, { FLogMode mode = FLogMode.debug }) {
 
 
 
-## 使用
+## 四、使用
 
 ```dart
 // 直接使用FLog
