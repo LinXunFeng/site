@@ -80,6 +80,7 @@ feed:
   type: atom
   path: atom.xml
   order_by: -date
+  icon: /images/others/profile/avatar.jpg
 
 # 站内搜索
 search:
