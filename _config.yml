@@ -75,6 +75,12 @@ pagination_dir: page
 ## Themes: https://hexo.io/themes/
 theme: butterfly
 
+# RSS
+feed:
+  type: atom
+  path: atom.xml
+  order_by: -date
+
 # 站内搜索
 search:
   path: search.xml
