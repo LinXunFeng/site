@@ -9,7 +9,7 @@ tags:
 
 <Excerpt in index | 首页摘要> 
 
-近期将测试机升级至 `iOS14` ，测试使用 `Flutter混合开发` 的线上 `APP`，没发现什么问题，但是使用 `Xcode` 安装`APP`的场景下，断开 `Xcode` 后再运行却闪退了。
+近期将测试机升级至 iOS14 ，测试使用 Flutter混合开发 的线上 APP，没发现什么问题，但是使用 Xcode 安装APP 的场景下，断开 Xcode 后再运行却闪退了。
 
 +<!-- more -->
 
@@ -55,6 +55,8 @@ tags:
 
 ![](/images/2020/09/Flutter-低版本在iOS14上遇到的问题与解决方案/01.png)
 
+![](/images/2020/09/Flutter-低版本在iOS14上遇到的问题与解决方案/03.png)
+
 ### 运行
 
 再次运行到真机上，断开 `Xcode` 运行不会再崩溃了
@@ -92,18 +94,18 @@ if __name__ == "__main__":
     target_name = None
 
     try:
-        opts, args = getopt.getopt(argv, "p:m:t:", ["path=, fbm=, target="])
+        opts, args = getopt.getopt(argv, "p:m:t:", ["path=, mode=, target="])
     except getopt.GetoptError:
         print('switch_flutter_build_mode.py -p "plist文件路径" -m "模式(release|debug)" -t "target名称"')
-        sys.exit(2)
+        sys.exit(1)
 
     for opt, arg in opts:
         if opt in ["-p", "--path"]:
             project_path = arg
             if len(project_path) == 0:
                 print('请输入项目的地址')
-                sys.exit('请输入项目的地址')
-        if opt in ["-m", "--fbm"]:
+                sys.exit(2)
+        if opt in ["-m", "--mode"]:
             flutter_build_mode = (True, arg if len(arg) > 0 else "release")
         if opt in ["-t", "--target"]:
             target_name = arg
@@ -113,7 +115,7 @@ if __name__ == "__main__":
         fileName = project_path.split("/")[-1]
         if not fileName.endswith("xcodeproj"):
             print("请使用-p指定.xcodeproj文件的路径")
-            sys.exit(2)
+            sys.exit(3)
         project = XcodeProject.load(project_path + '/project.pbxproj')
         # 设置 User-Defined (如果target_name是None，则每个target都会设置flag)
         project.set_flags('FLUTTER_BUILD_MODE', flutter_build_mode[1], target_name)
