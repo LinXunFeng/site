@@ -19,7 +19,7 @@ tags:
 
 近期将测试机升级至 `iOS14` ，测试使用 `Flutter混合开发` 的线上 `APP`，没发现什么问题，但是使用 `Xcode` 安装`APP`的场景下，断开 `Xcode` 后再运行却闪退了。
 
-以我们公司的 `APP` 测试的结果如下：
+公司的 `APP` 测试结果如下：
 
 | APP来源 | 是否闪退                           | 模式    |
 | ------- | ---------------------------------- | ------- |
@@ -29,7 +29,7 @@ tags:
 
 ### 问题原因
 
-闪退的原因是原因 `Flutter SDK`,  `Flutter` 官方的更新速度也是快，对 `iOS14` 进行了说明：  [Flutter官网说明链接](https://flutter.dev/docs/development/ios-14)
+闪退的原因是因为 `Flutter SDK`,  `Flutter` 官方的更新速度也是快，对 `iOS14` 进行了说明：  [Flutter官网说明链接](https://flutter.dev/docs/development/ios-14)
 
 大致意思就是说，如果我们在 `iOS14` 的真机上安装了 `debug模式` 编译出来的 `flutter` 应用，那么在断开编译安装连接后，将无法从桌面上打开该应用程序。
 
@@ -41,7 +41,7 @@ tags:
 ### 补充说明
 
 1. 该闪退的情况只发生在真机，并且在模拟器运行的时候， `Flutter` 模块的编译模式需要为 `debug`， 如果设置了 `release`，编译将会报错。
-2. 官方指出如果是纯 `Flutter` 可以直接使用 `master channel` 的 `Flutter版本` 秒杀这个问题，但对混合开发并没有该说明，加上我们是使用闲鱼的 `flutter_boost` 实现的混合开发，限制了 `Flutter` 的版本，所以我也就没有去实践该方案对我们是否可行
+2. 官方指出如果是 `纯Flutter项目` 可以直接使用 `master channel` 的 `Flutter版本` 秒杀这个问题，但对混合开发并没有该说明，加上我们是使用闲鱼的 `flutter_boost` 实现的混合开发，限制了 `Flutter` 的版本，所以我也就没有去实践该方案对我们是否可行
 
 
 
@@ -51,7 +51,7 @@ tags:
 
 ### 配置
 
-用 `Xcode` 打开工程项目，在包含 ，在 `Build Settings` 的最下方找到 `User-Defined`，点击 `+ ` 按钮，添加一个键为 `FLUTTER_BUILD_MODE` ，值为 `release` 的配置。
+用 `Xcode` 打开工程项目，在 `Build Settings` 的最下方找到 `User-Defined`，点击 `+ ` 按钮，添加一个键为 `FLUTTER_BUILD_MODE` ，值为 `release` 的配置。
 
 ![](/images/2020/09/Flutter-低版本在iOS14上遇到的问题与解决方案/01.png)
 
@@ -59,13 +59,13 @@ tags:
 
 ### 运行
 
-再次运行到真机上，断开 `Xcode` 运行不会再崩溃了
+再次运行到真机上，断开 `Xcode` 运行也不会崩溃了
 
 ### 问题
 
 真机的问题看似是解决了，但是会有问题
 
-问题一：`release` 或 `profile` 模式下，`Flutter` 使用的 `AOT`，一些功能不能使用，如：代码断点调试，热重载
+问题一：`release` 或 `profile` 模式下，`Flutter` 使用的是 `AOT`，一些功能不能使用，如：代码断点调试，热重载
 
 问题二：上面也提到了，模拟器只能运行在 `debug` 模式下，而我们无法避免会在真机和模拟器之间反复切换运行，每次切换就需要手动调整 `FLUTTER_BUILD_MODE` 的值，十分麻烦
 
@@ -73,7 +73,7 @@ tags:
 
 
 
-### 三、优化方案
+## 三、优化方案
 
 其实，真机上的 `APP` 在断开 `Xcode` 后无法运行，这个对我们开发者来说不是什么问题，问题是给到测试人员就必须要可以打开才行，包括蒲公英上的包，所以为了节省这些不必要的时间，我们需要自己动手撸一个帮助我们切换 `Flutter编译模式` 的脚本。
 
@@ -89,7 +89,7 @@ from pbxproj import XcodeProject
 if __name__ == "__main__":
     argv = sys.argv[1:]
     # 处理flutter_build_mode
-    flutter_build_mode = (False, "debug/release")
+    flutter_build_mode = (False, "release")
     # target名称
     target_name = None
 
@@ -136,7 +136,7 @@ python switch_flutter_build_mode.py -p 'xxx/项目.xcodeproj' -t target名称 -m
 | -t   | `target` 名称                              |
 | -m   | 编译模式 ( `release`、`debug`、`profile` ) |
 
-PS: 我使用的 `Python3`，上面的脚本也是基于 `Python3` 写的
+PS: 脚本基于 `Python3` 
 
 我们是使用 `Jenkins` 进行打包并自动上传至蒲公英的，所以只需要在 `Jenkins` 中配置打包前调用该脚本即可。
 
