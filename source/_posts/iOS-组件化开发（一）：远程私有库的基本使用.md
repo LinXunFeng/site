@@ -45,10 +45,10 @@ tags:
 
 2. 将远程索引库添加到本地 `pod repo add 索引库名称 索引库地址`
 
-3. 在本地创建一个pod模板库 `pod lib create 组件名称`
-  将框架的核心代码添加到Classes目录下
-  本地安装测试核心代码是否可用 `pod install`
-  修改Spec描述文件
+3. 在本地创建一个pod模板库 `pod lib create 组件名称`<br>
+  将框架的核心代码添加到Classes目录下<br>
+  本地安装测试核心代码是否可用 `pod install`<br>
+  修改Spec描述文件<br>
   将修改好的模板库上传至远程私有库
 
 4. 上传代码和打标签<br>
