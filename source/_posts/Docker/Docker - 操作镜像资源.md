@@ -3,7 +3,6 @@ title: Docker - 操作镜像资源
 date: 2021-01-24 22:38:10
 permalink: /pages/084bf9/
 categories: 
-  - 后端
   - Docker
 tags: 
   - Docker

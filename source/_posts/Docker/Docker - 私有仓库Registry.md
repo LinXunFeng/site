@@ -3,7 +3,6 @@ title: Docker - 私有仓库Registry
 date: 2021-01-31 14:23:19
 permalink: /pages/bfa843/
 categories: 
-  - 后端
   - Docker
 tags: 
   - Docker

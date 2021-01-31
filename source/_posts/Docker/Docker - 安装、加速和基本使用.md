@@ -3,7 +3,6 @@ title: Docker - 安装、加速和基本使用
 date: 2021-01-24 21:52:14
 permalink: /pages/2ffb7f/
 categories: 
-  - 后端
   - Docker
 tags: 
   - Docker

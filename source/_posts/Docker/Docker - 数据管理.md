@@ -3,7 +3,6 @@ title: Docker - 数据管理
 date: 2021-01-31 14:23:29
 permalink: /pages/867207/
 categories: 
-  - 后端
   - Docker
 tags: 
   - Docker
