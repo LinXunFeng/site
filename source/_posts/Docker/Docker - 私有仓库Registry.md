@@ -139,6 +139,7 @@ curl -v --silent -H "Accept: application/vnd.docker.distribution.manifest.v2+jso
 需要在运行 `Registry` 容器时设置`REGISTRY_STORAGE_DELETE_ENABLED` 为 `true` 
 
 举例
+
 `docker-compose.yaml`：设置环境变量
 
 ```yaml
