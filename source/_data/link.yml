@@ -1,3 +1,11 @@
+- class_name: 关于
+  class_desc: 
+  link_list:
+    - name: FSA全栈行动
+      link: https://fullstackaction.com/
+      avatar: https://cdn.jsdelivr.net/gh/FullStackAction/PicBed@resource/image/20210131112211.jpg
+      descr: 微信公众号：FullStackAction
+
 - class_name: 友情鏈接
   class_desc: 小伙伴
   link_list:
