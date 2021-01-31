@@ -64,6 +64,11 @@ local_search:
     input_placeholder: Search for Posts
     hits_empty: "We didn't find any results for the search: ${query}" # if there are no result
 
+search:
+  path: search.xml
+  field: post
+  content: true
+
 # Math (數學)
 # --------------------------------------
 # About the per_page
