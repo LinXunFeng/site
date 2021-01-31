@@ -598,7 +598,7 @@ aside:
     description:
   card_announcement:
     enable: true
-    content: <img src="/images/others/wx/wxQR_tip.png" alt="微信公众号 FullStackAction"> # This is my Blog
+    content: <img src="https://cdn.jsdelivr.net/gh/FullStackAction/PicBed@resource/image/20210131111432.png" alt="微信公众号 FullStackAction"> # This is my Blog
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
