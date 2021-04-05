@@ -102,7 +102,7 @@ services:
       - "5000"
 ```
 
-创建 `~/nginx/conf.d` 目录，并进入该目录
+创建 `~/data/lxf/nginx/conf.d` 目录，并进入该目录
 
 ```shell
 mkdir -p ~/data/lxf/nginx/conf.d
