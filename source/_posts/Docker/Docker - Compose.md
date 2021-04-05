@@ -91,7 +91,7 @@ services:
     image: nginx # 指定通过nginx该镜像进行启动，这里可以指定镜像的版本号，如果不指定，默认为latest
     ports: # 端口映射，即 -p 参数，将宿主机的80端口映射到容器的80端口
       - 8090:80
-    links: # 指明当前服务可以访问到app这个服务
+    links: # 指明当前服务可以访问到jenkins这个服务
       - jenkins
     volumes: # 目录映射，即 -v 参数，（宿主机目录:容器目录）
       - ~/data/lxf/nginx/conf.d:/etc/nginx/conf.d
